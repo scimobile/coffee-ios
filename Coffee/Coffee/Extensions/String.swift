@@ -45,4 +45,50 @@ extension String? {
         else { return false }
         return true
     }
+    
+    var isValidPassword: Bool {
+        let regex = Regex {
+            /^/
+            Lookahead {
+                Regex {
+                    ZeroOrMore {
+                        /./
+                    }
+                    One(.digit)
+                }
+            }
+            Lookahead {
+                Regex {
+                    ZeroOrMore {
+                        /./
+                    }
+                    CharacterClass(
+                        ("A"..."Z"),
+                        ("a"..."z")
+                    )
+                }
+            }
+            Lookahead {
+                Regex {
+                    ZeroOrMore {
+                        /./
+                    }
+                    CharacterClass(
+                        .word,
+                        .whitespace
+                    )
+                    .inverted
+                }
+            }
+            Repeat(8...) {
+                /./
+            }
+            /$/
+        }
+        guard let password = self,
+              !password.isEmpty,
+              password.wholeMatch(of: regex) != nil
+        else { return false }
+        return true
+    }
 }

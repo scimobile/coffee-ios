@@ -25,6 +25,9 @@
 		065EDC922C60D24900095316 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065EDC912C60D24900095316 /* Auth.storyboard */; };
 		066B4EB82C60DE690004B6AF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066B4EB72C60DE690004B6AF /* UIView.swift */; };
 		069EEA452C6114CE00DB10DE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069EEA442C6114CE00DB10DE /* String.swift */; };
+		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
+		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
+		16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D22C62666200A8BE97 /* RegisterRequest.swift */; };
 		FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF192C6002E80089CB35 /* AppDelegate.swift */; };
 		FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */; };
 		FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* ViewController.swift */; };
@@ -55,6 +58,9 @@
 		065EDC912C60D24900095316 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		066B4EB72C60DE690004B6AF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		069EEA442C6114CE00DB10DE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
+		16F294D22C62666200A8BE97 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		FEEABF162C6002E80089CB35 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEABF192C6002E80089CB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				065EDC872C60CCF500095316 /* LoginRequest.swift */,
+				16F294D22C62666200A8BE97 /* RegisterRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -191,10 +198,28 @@
 		065EDC8C2C60D21900095316 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				16F294CD2C625C8F00A8BE97 /* Register */,
+				16F294CC2C625C8300A8BE97 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		16F294CC2C625C8300A8BE97 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				065EDC8F2C60D23400095316 /* LoginVC.swift */,
 				065EDC8D2C60D22600095316 /* LoginVM.swift */,
 			);
-			path = Auth;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		16F294CD2C625C8F00A8BE97 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				16F294CE2C625CB700A8BE97 /* RegisterVC.swift */,
+				16F294D02C625CCD00A8BE97 /* RegisterVM.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		FEEABF0D2C6002E80089CB35 = {
@@ -366,6 +391,7 @@
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
 				066B4EB82C60DE690004B6AF /* UIView.swift in Sources */,
+				16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */,
 				065EDC782C60C7FC00095316 /* CoffeeRequestInterceptor.swift in Sources */,
 				065EDC862C60CC2E00095316 /* LoginResponse.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
@@ -373,6 +399,8 @@
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
+				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
+				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
 				065EDC722C60C77A00095316 /* NetworkError.swift in Sources */,
 				065EDC902C60D23400095316 /* LoginVC.swift in Sources */,
 				069EEA452C6114CE00DB10DE /* String.swift in Sources */,

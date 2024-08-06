@@ -47,10 +47,10 @@ class LoginVM {
     }
     
     func login() {
-        repository.login(email: email!, password: password!) {
-            self.delegate.onSuccessLogin()
-        } onFailed: { error in
-            self.delegate.onError(error: error.localizedDescription)
+        repository.login(email: email!, password: password!) { [weak self] in
+            self?.delegate.onSuccessLogin()
+        } onFailed: { [weak self] error in
+            self?.delegate.onError(error: error.localizedDescription)
         }
     }
     

@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias RegisterResponse = LoginResponse
+
 struct LoginResponse: Codable {
     let code: Int?
     let message: String?

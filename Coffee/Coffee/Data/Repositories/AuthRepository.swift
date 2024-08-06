@@ -26,4 +26,26 @@ class AuthRepository {
             onSuccess()
         }, onFailed: onFailed)
     }
+    
+    func register (
+        fullName: String,
+        email: String,
+        phoneNumber: String,
+        password: String,
+        onSuccess: @escaping () -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    ) {
+        remoteDataSource.register(
+            fullName: fullName,
+            email: email,
+            phoneNumber: phoneNumber,
+            password: password,
+            onSuccess: { token in
+                KeychainManager.shared.setAccessToken(with: token)
+                onSuccess()
+            },
+            onFailed: onFailed
+        )
+
+    }
 }

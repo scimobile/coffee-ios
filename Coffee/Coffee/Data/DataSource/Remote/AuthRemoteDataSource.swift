@@ -32,16 +32,52 @@ class AuthRemoteDataSource {
             }
         } onFailed: { [weak self] error in
             switch error {
-            case .UNEXPECTED_STATUS_CODE(let code):
-                if code == self?.newUserErrorCode {
-                    onFailed(.NEW_USER)
-                }
-                else {
+                case .UNEXPECTED_STATUS_CODE(let code):
+                    if code == self?.newUserErrorCode {
+                        onFailed(.NEW_USER)
+                    }
+                    else {
+                        onFailed(.UNKNOWN(error.customMessage))
+                    }
+                default:
                     onFailed(.UNKNOWN(error.customMessage))
-                }
-            default:
-                onFailed(.UNKNOWN(error.customMessage))
             }
         }
+    }
+    
+    func register(
+        fullName: String,
+        email: String,
+        phoneNumber: String,
+        password: String,
+        onSuccess: @escaping (String) -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    ) {
+        let request = RegisterRequest(
+            fullName: fullName,
+            email: email,
+            phoneNumber: phoneNumber,
+            password: password
+        )
+        
+        network.request(endPoint: .Register(request)) { (response: RegisterResponse) in
+            if response.code == 201, let accessToken = response.data?.accessToken, !accessToken.isEmpty {
+                onSuccess(accessToken)
+            } else {
+                onFailed(.UNKNOWN("Something went wrong."))
+            }
+        } onFailed: { [weak self] error in
+            switch error {
+                case .UNEXPECTED_STATUS_CODE(let code):
+                    if code == self?.duplicateUserErrorCode {
+                        onFailed(.DUPLICATE_USER)
+                    } else {
+                        onFailed(.UNKNOWN(error.customMessage))
+                    }
+                default:
+                    onFailed(.UNKNOWN(error.customMessage))
+            }
+        }
+        
     }
 }
