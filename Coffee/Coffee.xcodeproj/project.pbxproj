@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF192C6002E80089CB35 /* AppDelegate.swift */; };
 		FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */; };
-		FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* ViewController.swift */; };
+		FEEABF1E2C6002E80089CB35 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* MainVC.swift */; };
 		FEEABF212C6002E80089CB35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF202C6002E80089CB35 /* Base */; };
 		FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF222C6002EA0089CB35 /* Assets.xcassets */; };
 		FEEABF262C6002EA0089CB35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF252C6002EA0089CB35 /* Base */; };
@@ -18,13 +18,19 @@
 		FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */; };
 		FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */; };
 		FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */; };
+		FF55DE742C61EDBE0062EE9E /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */; };
+		FF55DE772C61EDE40062EE9E /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */; };
+		FF55DE782C61EDE40062EE9E /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */; };
+		FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE792C61EE090062EE9E /* OnboardingPage.swift */; };
+		FF55DE7F2C61EE740062EE9E /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */; };
+		FF6515882C62692C0030805C /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6515872C62692C0030805C /* RootNC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FEEABF162C6002E80089CB35 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEABF192C6002E80089CB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEEABF1D2C6002E80089CB35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEEABF1D2C6002E80089CB35 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FEEABF202C6002E80089CB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEEABF222C6002EA0089CB35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEEABF252C6002EA0089CB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +39,12 @@
 		FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OnBoarding.storyboard; path = ../../../../../../Downloads/Coffee/Coffee/Storyboards/OnBoarding/OnBoarding.storyboard; sourceTree = "<group>"; };
+		FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingCell.swift; path = ../../../../../../Downloads/Coffee/Coffee/Views/Cell/OnboardingCell.swift; sourceTree = "<group>"; };
+		FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingCell.xib; path = ../../../../../../Downloads/Coffee/Coffee/Views/Cell/OnboardingCell.xib; sourceTree = "<group>"; };
+		FF55DE792C61EE090062EE9E /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		FF6515872C62692C0030805C /* RootNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 		FEEABF182C6002E80089CB35 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				FF6515862C6269140030805C /* Navigation */,
 				FEEABF392C60039B0089CB35 /* Constants */,
 				FEEABF382C6003930089CB35 /* Extensions */,
 				FEEABF372C60038B0089CB35 /* Utils */,
@@ -100,6 +113,7 @@
 		FEEABF322C6003500089CB35 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				FFA912CE2C6100A700D8F7C7 /* OnBoarding */,
 				FEEABF1F2C6002E80089CB35 /* Main.storyboard */,
 				FEEABF242C6002EA0089CB35 /* LaunchScreen.storyboard */,
 			);
@@ -109,7 +123,9 @@
 		FEEABF332C6003620089CB35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FEEABF1D2C6002E80089CB35 /* ViewController.swift */,
+				FF55DE7E2C61EE740062EE9E /* Onboarding */,
+				FFED93A62C610F9700CA13D8 /* Cell */,
+				FEEABF1D2C6002E80089CB35 /* MainVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +142,7 @@
 		FEEABF352C60037A0089CB35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF55DE7A2C61EE090062EE9E /* Onboarding */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +184,48 @@
 				FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FF55DE7A2C61EE090062EE9E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FF55DE792C61EE090062EE9E /* OnboardingPage.swift */,
+			);
+			name = Onboarding;
+			path = Models/Onboarding;
+			sourceTree = SOURCE_ROOT;
+		};
+		FF55DE7E2C61EE740062EE9E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FF6515862C6269140030805C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FF6515872C62692C0030805C /* RootNC.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FFA912CE2C6100A700D8F7C7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		FFED93A62C610F9700CA13D8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */,
+				FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +299,8 @@
 				FEEABF262C6002EA0089CB35 /* Base in Resources */,
 				FEEABF212C6002E80089CB35 /* Base in Resources */,
 				FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */,
+				FF55DE782C61EDE40062EE9E /* OnboardingCell.xib in Resources */,
+				FF55DE742C61EDBE0062EE9E /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
+				FEEABF1E2C6002E80089CB35 /* MainVC.swift in Sources */,
+				FF6515882C62692C0030805C /* RootNC.swift in Sources */,
+				FF55DE772C61EDE40062EE9E /* OnboardingCell.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
+				FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */,
+				FF55DE7F2C61EE740062EE9E /* OnboardingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
