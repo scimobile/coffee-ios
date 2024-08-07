@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E335D2C63BFB700F2390C /* Storyboarded.swift */; };
+		061E33612C63C2C000F2390C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 061E33602C63C2C000F2390C /* GoogleSignInSwift */; };
+		061E33642C63CA1500F2390C /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 061E33632C63CA1500F2390C /* FacebookLogin */; };
 		065EDC5E2C60C58000095316 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 065EDC5D2C60C58000095316 /* Alamofire */; };
 		065EDC612C60C5EB00095316 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 065EDC602C60C5EB00095316 /* KeychainAccess */; };
 		065EDC702C60C71700095316 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EDC6F2C60C71700095316 /* NetworkManager.swift */; };
@@ -42,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061E335D2C63BFB700F2390C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		065EDC6F2C60C71700095316 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		065EDC712C60C77A00095316 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		065EDC732C60C78E00095316 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -80,9 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061E33642C63CA1500F2390C /* FacebookLogin in Frameworks */,
 				FEEABF2F2C60031F0089CB35 /* IQKeyboardManagerSwift in Frameworks */,
 				065EDC5E2C60C58000095316 /* Alamofire in Frameworks */,
 				065EDC612C60C5EB00095316 /* KeychainAccess in Frameworks */,
+				061E33612C63C2C000F2390C /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,7 @@
 		065EDC6C2C60C6FB00095316 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				061E335D2C63BFB700F2390C /* Storyboarded.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -322,6 +329,8 @@
 				FEEABF2E2C60031F0089CB35 /* IQKeyboardManagerSwift */,
 				065EDC5D2C60C58000095316 /* Alamofire */,
 				065EDC602C60C5EB00095316 /* KeychainAccess */,
+				061E33602C63C2C000F2390C /* GoogleSignInSwift */,
+				061E33632C63CA1500F2390C /* FacebookLogin */,
 			);
 			productName = Coffee;
 			productReference = FEEABF162C6002E80089CB35 /* Coffee.app */;
@@ -355,6 +364,8 @@
 				FEEABF2D2C60031F0089CB35 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				065EDC5C2C60C58000095316 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				065EDC5F2C60C5EB00095316 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				061E335F2C63C2C000F2390C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				061E33622C63CA1500F2390C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = FEEABF172C6002E80089CB35 /* Products */;
 			projectDirPath = "";
@@ -395,6 +406,7 @@
 				065EDC782C60C7FC00095316 /* CoffeeRequestInterceptor.swift in Sources */,
 				065EDC862C60CC2E00095316 /* LoginResponse.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
+				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
@@ -633,6 +645,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		061E335F2C63C2C000F2390C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.0;
+			};
+		};
+		061E33622C63CA1500F2390C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 17.0.2;
+			};
+		};
 		065EDC5C2C60C58000095316 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -660,6 +688,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		061E33602C63C2C000F2390C /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 061E335F2C63C2C000F2390C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		061E33632C63CA1500F2390C /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 061E33622C63CA1500F2390C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		065EDC5D2C60C58000095316 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 065EDC5C2C60C58000095316 /* XCRemoteSwiftPackageReference "Alamofire" */;

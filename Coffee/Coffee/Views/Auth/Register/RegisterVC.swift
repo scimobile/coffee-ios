@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var tfFullNameView: UIView!
     @IBOutlet weak var tfEmailView: UIView!
@@ -34,6 +34,8 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnFacebookLogin: UIButton!
     @IBOutlet weak var btnGoogleLogin: UIButton!
+    
+    static var storyboardName: String = "Auth"
     
     private var showPassword: Bool = false {
         didSet {

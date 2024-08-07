@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import GoogleSignIn
+import FacebookLogin
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, Storyboarded {
 
     @IBOutlet weak var tfEmailView: UIView!
     @IBOutlet weak var tfEmail: UITextField!
@@ -22,6 +24,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var btnGoogleView: UIView!
     @IBOutlet weak var btnGoogleLogin: UIButton!
     @IBOutlet weak var btnSignUp: UIButton!
+    
+    static var storyboardName: String = "Auth"
     
     private var showPassword: Bool = false {
         didSet {
@@ -76,7 +80,6 @@ class LoginVC: UIViewController {
     }
     
     @objc func onTapSignUp() {
-        
     }
     
     @objc func onTapForgotPassword() {
@@ -84,11 +87,19 @@ class LoginVC: UIViewController {
     }
     
     @objc func onTapFacebookLogin() {
-        
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: self) { result, error in
+            guard error == nil else { return }
+            guard let token = result?.token?.tokenString else { return }
+            print(token)
+        }
     }
     
     @objc func onTapGoogleLogin() {
-        
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else { return }
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+        }
     }
     
     private func setError(label: UILabel, error: String) {
