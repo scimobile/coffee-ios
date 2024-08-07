@@ -17,12 +17,12 @@
 		FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */; };
 		FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */; };
 		FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */; };
-		FF55DE742C61EDBE0062EE9E /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */; };
-		FF55DE772C61EDE40062EE9E /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */; };
-		FF55DE782C61EDE40062EE9E /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */; };
 		FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE792C61EE090062EE9E /* OnboardingPage.swift */; };
 		FF55DE7F2C61EE740062EE9E /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */; };
 		FF6515882C62692C0030805C /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6515872C62692C0030805C /* RootNC.swift */; };
+		FFEF8F5D2C63B52E002BA7BC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEF8F5C2C63B52E002BA7BC /* Onboarding.storyboard */; };
+		FFEF8F642C63B9C0002BA7BC /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF8F622C63B9C0002BA7BC /* OnboardingCell.swift */; };
+		FFEF8F652C63B9C0002BA7BC /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEF8F632C63B9C0002BA7BC /* OnboardingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +37,12 @@
 		FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OnBoarding.storyboard; path = ../../../../../../Downloads/Coffee/Coffee/Storyboards/OnBoarding/OnBoarding.storyboard; sourceTree = "<group>"; };
-		FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingCell.swift; path = ../../../../../../Downloads/Coffee/Coffee/Views/Cell/OnboardingCell.swift; sourceTree = "<group>"; };
-		FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingCell.xib; path = ../../../../../../Downloads/Coffee/Coffee/Views/Cell/OnboardingCell.xib; sourceTree = "<group>"; };
 		FF55DE792C61EE090062EE9E /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		FF6515872C62692C0030805C /* RootNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
+		FFEF8F5C2C63B52E002BA7BC /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		FFEF8F622C63B9C0002BA7BC /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		FFEF8F632C63B9C0002BA7BC /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +211,7 @@
 		FFA912CE2C6100A700D8F7C7 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				FF55DE732C61EDBE0062EE9E /* OnBoarding.storyboard */,
+				FFEF8F5C2C63B52E002BA7BC /* Onboarding.storyboard */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		FFED93A62C610F9700CA13D8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FF55DE752C61EDE40062EE9E /* OnboardingCell.swift */,
-				FF55DE762C61EDE40062EE9E /* OnboardingCell.xib */,
+				FFEF8F622C63B9C0002BA7BC /* OnboardingCell.swift */,
+				FFEF8F632C63B9C0002BA7BC /* OnboardingCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -290,14 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */,
+				FFEF8F5D2C63B52E002BA7BC /* Onboarding.storyboard in Resources */,
 				FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */,
 				FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */,
 				FEEABF3F2C6004020089CB35 /* Poppins-Medium.ttf in Resources */,
 				FEEABF262C6002EA0089CB35 /* Base in Resources */,
 				FEEABF212C6002E80089CB35 /* Base in Resources */,
+				FFEF8F652C63B9C0002BA7BC /* OnboardingCell.xib in Resources */,
 				FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */,
-				FF55DE782C61EDE40062EE9E /* OnboardingCell.xib in Resources */,
-				FF55DE742C61EDBE0062EE9E /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6515882C62692C0030805C /* RootNC.swift in Sources */,
-				FF55DE772C61EDE40062EE9E /* OnboardingCell.swift in Sources */,
+				FFEF8F642C63B9C0002BA7BC /* OnboardingCell.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */,
