@@ -25,8 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var rootVC:UIViewController? = nil
         
         if UserDefaults.standard.bool(forKey: "hasUsedAppBefore"){
-            rootVC = mainSb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-            
+//            rootVC = mainSb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            print("Go to something");
         }else{
             rootVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
         }
