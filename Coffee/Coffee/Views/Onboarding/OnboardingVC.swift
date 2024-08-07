@@ -24,7 +24,6 @@ class OnboardingVC: UIViewController {
         cvOnboarding.register(.init(nibName: "OnboardingCell", bundle: nil), forCellWithReuseIdentifier: "OnboardingCell")
         cvOnboarding.dataSource = self
         cvOnboarding.delegate = self
-        cvOnboarding.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         cvOnboarding.isPagingEnabled = true
        
         pageControl.numberOfPages = pages.count
@@ -42,10 +41,9 @@ class OnboardingVC: UIViewController {
             cvOnboarding.scrollToItem(at: nextIdex, at: .centeredHorizontally, animated: true)
             pageControl.currentPage = nextIdex.item
         } else {
-            print("Get started button tapped")
             UserDefaults.standard.set(true, forKey: "hasUsedAppBefore")
-            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC") as! MainVC
-            navigationController?.pushViewController(vc, animated: true)
+            /// TODO : GO TO LOGIN
+            print("Go to Login")
         }
         
         updateBtnTitle()

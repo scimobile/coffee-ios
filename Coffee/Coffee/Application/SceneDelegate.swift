@@ -20,13 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
 
         // Set Onboarding storyboard as initial storyboard
-        let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-        let mainSb = UIStoryboard.init(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
         var rootVC:UIViewController? = nil
         
         if UserDefaults.standard.bool(forKey: "hasUsedAppBefore"){
-//            rootVC = mainSb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-            print("Go to something");
+            // GO to Login
+            print("Go to Login In")
         }else{
             rootVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
         }
