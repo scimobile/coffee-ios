@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import GoogleSignIn
+import FacebookLogin
 
 protocol RegisterViewDelegate {
     func onValidate(validationError: [RegisterVM.FormInput])
@@ -121,7 +123,17 @@ class RegisterVM {
             } onFailed: { [weak self] error in
                 self?.delegate.onError(error: error.localizedDescription)
             }
-
+    }
+    
+    func registerGoogle(_ parentVC: UIViewController) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: parentVC) { result, error in
+            guard error == nil else { return }
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+        }
+    }
+    
+    func registerFacebook(_ parentVC: UIViewController) {
+        
     }
     
 }

@@ -10,6 +10,8 @@
 		061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E335D2C63BFB700F2390C /* Storyboarded.swift */; };
 		061E33612C63C2C000F2390C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 061E33602C63C2C000F2390C /* GoogleSignInSwift */; };
 		061E33642C63CA1500F2390C /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 061E33632C63CA1500F2390C /* FacebookLogin */; };
+		063AE4252C650ABF0020531D /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063AE4242C650ABF0020531D /* ForgotPasswordVM.swift */; };
+		063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063AE4262C650ACA0020531D /* ForgotPasswordVC.swift */; };
 		065EDC5E2C60C58000095316 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 065EDC5D2C60C58000095316 /* Alamofire */; };
 		065EDC612C60C5EB00095316 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 065EDC602C60C5EB00095316 /* KeychainAccess */; };
 		065EDC702C60C71700095316 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EDC6F2C60C71700095316 /* NetworkManager.swift */; };
@@ -27,6 +29,9 @@
 		065EDC902C60D23400095316 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EDC8F2C60D23400095316 /* LoginVC.swift */; };
 		065EDC922C60D24900095316 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065EDC912C60D24900095316 /* Auth.storyboard */; };
 		066B4EB82C60DE690004B6AF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066B4EB72C60DE690004B6AF /* UIView.swift */; };
+		066E33322C650E9B003E4387 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33312C650E9B003E4387 /* Array.swift */; };
+		066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33342C651726003E4387 /* ResetPasswordVC.swift */; };
+		066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33362C6518F1003E4387 /* ResetPasswordVM.swift */; };
 		069EEA452C6114CE00DB10DE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069EEA442C6114CE00DB10DE /* String.swift */; };
 		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
 		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
@@ -46,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		061E335D2C63BFB700F2390C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		063AE4242C650ABF0020531D /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
+		063AE4262C650ACA0020531D /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		065EDC6F2C60C71700095316 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		065EDC712C60C77A00095316 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		065EDC732C60C78E00095316 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -61,6 +68,9 @@
 		065EDC8F2C60D23400095316 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		065EDC912C60D24900095316 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		066B4EB72C60DE690004B6AF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		066E33312C650E9B003E4387 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		066E33342C651726003E4387 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		066E33362C6518F1003E4387 /* ResetPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVM.swift; sourceTree = "<group>"; };
 		069EEA442C6114CE00DB10DE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
@@ -95,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063AE4232C650AA00020531D /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				063AE4262C650ACA0020531D /* ForgotPasswordVC.swift */,
+				063AE4242C650ABF0020531D /* ForgotPasswordVM.swift */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
 		065EDC6A2C60C6E000095316 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +127,7 @@
 				065EDC7E2C60C98C00095316 /* NSNotification.swift */,
 				066B4EB72C60DE690004B6AF /* UIView.swift */,
 				069EEA442C6114CE00DB10DE /* String.swift */,
+				066E33312C650E9B003E4387 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,10 +225,21 @@
 		065EDC8C2C60D21900095316 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				066E33332C651712003E4387 /* Reset Password */,
+				063AE4232C650AA00020531D /* Forgot Password */,
 				16F294CD2C625C8F00A8BE97 /* Register */,
 				16F294CC2C625C8300A8BE97 /* Login */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		066E33332C651712003E4387 /* Reset Password */ = {
+			isa = PBXGroup;
+			children = (
+				066E33342C651726003E4387 /* ResetPasswordVC.swift */,
+				066E33362C6518F1003E4387 /* ResetPasswordVM.swift */,
+			);
+			path = "Reset Password";
 			sourceTree = "<group>";
 		};
 		16F294CC2C625C8300A8BE97 /* Login */ = {
@@ -400,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
+				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
 				066B4EB82C60DE690004B6AF /* UIView.swift in Sources */,
 				16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */,
@@ -409,15 +441,19 @@
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
+				063AE4252C650ABF0020531D /* ForgotPasswordVM.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
+				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
+				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
 				065EDC722C60C77A00095316 /* NetworkError.swift in Sources */,
 				065EDC902C60D23400095316 /* LoginVC.swift in Sources */,
 				069EEA452C6114CE00DB10DE /* String.swift in Sources */,
 				065EDC812C60CAA000095316 /* AuthRemoteDataSource.swift in Sources */,
 				065EDC8B2C60D0B200095316 /* AuthRepository.swift in Sources */,
+				066E33322C650E9B003E4387 /* Array.swift in Sources */,
 				065EDC762C60C7AA00095316 /* CoffeeEndPoint.swift in Sources */,
 				065EDC7F2C60C98C00095316 /* NSNotification.swift in Sources */,
 				065EDC8E2C60D22600095316 /* LoginVM.swift in Sources */,

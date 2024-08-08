@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
-import FacebookLogin
 
 class LoginVC: UIViewController, Storyboarded {
 
@@ -43,9 +41,7 @@ class LoginVC: UIViewController, Storyboarded {
     }
 
     private func setUpViews() {
-        tfEmailView.addBorder()
-        tfPasswordView.addBorder()
-        btnGoogleView.addBorder()
+        [tfEmailView, tfPasswordView, btnGoogleView].addBorder()
         clearError()
     }
     
@@ -87,19 +83,11 @@ class LoginVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapFacebookLogin() {
-        let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["public_profile", "email"], from: self) { result, error in
-            guard error == nil else { return }
-            guard let token = result?.token?.tokenString else { return }
-            print(token)
-        }
+        self.vm.loginFacebook(self)
     }
     
     @objc func onTapGoogleLogin() {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
-            guard error == nil else { return }
-            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
-        }
+        self.vm.loginGoogle(self)
     }
     
     private func setError(label: UILabel, error: String) {

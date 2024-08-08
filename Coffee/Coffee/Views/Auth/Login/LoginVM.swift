@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import GoogleSignIn
+import FacebookLogin
 
 protocol LoginViewDelegate {
     func onValidate(validationError: [LoginVM.FormInput])
@@ -51,6 +53,22 @@ class LoginVM {
             self?.delegate.onSuccessLogin()
         } onFailed: { [weak self] error in
             self?.delegate.onError(error: error.localizedDescription)
+        }
+    }
+    
+    func loginGoogle(_ parentVC: UIViewController) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: parentVC) { result, error in
+            guard error == nil else { return }
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+        }
+    }
+    
+    func loginFacebook(_ parentVC: UIViewController) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: parentVC) { result, error in
+            guard error == nil else { return }
+            guard let token = result?.token?.tokenString else { return }
+            print(token)
         }
     }
     

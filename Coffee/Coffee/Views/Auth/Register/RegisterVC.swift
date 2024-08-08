@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 
 class RegisterVC: UIViewController, Storyboarded {
     
@@ -54,12 +53,7 @@ class RegisterVC: UIViewController, Storyboarded {
     }
     
     private func setUpViews() {
-        tfFullNameView.addBorder()
-        tfEmailView.addBorder()
-        tfPhoneNumberView.addBorder()
-        tfPasswordView.addBorder()
-        tfConfirmView.addBorder()
-        btnGoogleLoginView.addBorder()
+        [tfFullNameView, tfEmailView, tfPhoneNumberView, tfPasswordView, tfConfirmView, btnGoogleLoginView].addBorder()
         clearError()
     }
     
@@ -81,14 +75,11 @@ class RegisterVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapGoogleLogin() {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
-            guard error == nil else { return }
-            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
-        }
+        self.vm.registerGoogle(self)
     }
     
     @objc func onTapFacebookLogin() {
-        
+        self.vm.registerFacebook(self)
     }
     
     @objc func onTapLogin() {
@@ -138,7 +129,6 @@ class RegisterVC: UIViewController, Storyboarded {
         label.layer.opacity = 1
         label.text = error
     }
-
 }
 
 extension RegisterVC: RegisterViewDelegate {
