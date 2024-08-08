@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Show the app's signed-out state.
             } else {
                 // Show the app's signed-in state.
+                print(user?.accessToken.tokenString)
+                print(user?.profile?.email)
             }
         }
         

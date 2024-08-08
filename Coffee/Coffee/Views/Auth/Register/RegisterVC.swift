@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class RegisterVC: UIViewController, Storyboarded {
     
@@ -80,7 +81,10 @@ class RegisterVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapGoogleLogin() {
-        
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else { return }
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+        }
     }
     
     @objc func onTapFacebookLogin() {
