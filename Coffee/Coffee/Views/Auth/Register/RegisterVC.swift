@@ -61,6 +61,7 @@ class RegisterVC: UIViewController, Storyboarded {
         showPassword = false
         btnRegisterBtn.isEnabled = false
         btnShowPasswordBtn.addTarget(self, action: #selector(onTapShowHidePassword), for: .touchUpInside)
+        btnShowConfirmBtn.addTarget(self, action: #selector(onTapShowHidePassword), for: .touchUpInside)
         tfFullName.addTarget(self, action: #selector(onChangeFullName), for: .editingChanged)
         tfEmail.addTarget(self, action: #selector(onChangeEmail), for: .editingChanged)
         tfPhoneNumber.addTarget(self, action: #selector(onChangePhoneNumber), for: .editingChanged)
