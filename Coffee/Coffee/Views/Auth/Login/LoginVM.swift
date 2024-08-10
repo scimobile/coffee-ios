@@ -13,6 +13,7 @@ protocol LoginViewDelegate {
     func onValidate(validationError: [LoginVM.FormInput])
     func onSuccessLogin()
     func onError(error: String)
+    func onNewUser()
 }
 
 class LoginVM {
@@ -50,9 +51,17 @@ class LoginVM {
     
     func login() {
         repository.login(email: email!, password: password!) { [weak self] in
+            //MARK: ToDo
             self?.delegate.onSuccessLogin()
         } onFailed: { [weak self] error in
-            self?.delegate.onError(error: error.localizedDescription)
+            switch error {
+            case .NEW_USER:
+                self?.delegate.onNewUser()
+            case .UNKNOWN(let error):
+                self?.delegate.onError(error: error)
+            default:
+                break
+            }
         }
     }
     
@@ -60,6 +69,7 @@ class LoginVM {
         GIDSignIn.sharedInstance.signIn(withPresenting: parentVC) { result, error in
             guard error == nil else { return }
             guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+            //MARK: ToDo
         }
     }
     
@@ -68,7 +78,7 @@ class LoginVM {
         loginManager.logIn(permissions: ["public_profile", "email"], from: parentVC) { result, error in
             guard error == nil else { return }
             guard let token = result?.token?.tokenString else { return }
-            print(token)
+            //MARK: ToDo
         }
     }
     

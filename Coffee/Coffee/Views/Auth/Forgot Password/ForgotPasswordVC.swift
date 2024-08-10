@@ -40,7 +40,7 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapSubmit() {
-        
+        self.vm.submit()
     }
     
     private func clearError() {
@@ -55,7 +55,7 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
 
 extension ForgotPasswordVC: ForgotPasswordViewDelegate {
     func onSuccesss() {
-        
+        //MARK: ToDo
     }
     
     func onValidate(validationError: [ForgotPasswordVM.FormInput]) {
@@ -75,7 +75,7 @@ extension ForgotPasswordVC: ForgotPasswordViewDelegate {
         }
     }
     
-    func onFailed(error: String) {
-        
+    func onError(error: String) {
+        //MARK: ToDo
     }
 }

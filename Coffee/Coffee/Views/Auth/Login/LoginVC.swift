@@ -102,6 +102,11 @@ class LoginVC: UIViewController, Storyboarded {
 }
 
 extension LoginVC: LoginViewDelegate {
+    
+    func onNewUser() {
+        //MARK: ToDo
+    }
+    
     func onValidate(validationError: [LoginVM.FormInput]) {
         if validationError.count > 0 {
             btnLogin.isEnabled = false
@@ -122,10 +127,10 @@ extension LoginVC: LoginViewDelegate {
     }
     
     func onSuccessLogin() {
-        
+        //MARK: ToDo
     }
     
     func onError(error: String) {
-        
+        //MARK: ToDo
     }
 }

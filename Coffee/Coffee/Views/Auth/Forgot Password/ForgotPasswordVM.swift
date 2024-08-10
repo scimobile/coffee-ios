@@ -10,7 +10,7 @@ import Foundation
 protocol ForgotPasswordViewDelegate {
     func onSuccesss()
     func onValidate(validationError: [ForgotPasswordVM.FormInput])
-    func onFailed(error: String)
+    func onError(error: String)
 }
 
 class ForgotPasswordVM {
@@ -46,6 +46,18 @@ class ForgotPasswordVM {
     }
     
     func submit() {
-        
+        self.repository.forgotPassword(email: email!) { [weak self] in
+            //MARK: ToDo
+            self?.delegate.onSuccesss()
+        } onFailed: { [weak self] error in
+            switch error {
+            case .NEW_USER:
+                self?.delegate.onError(error: "Your email is not registered yet.")
+            case .UNKNOWN(let error):
+                self?.delegate.onError(error: error)
+            default:
+                break
+            }
+        }
     }
 }

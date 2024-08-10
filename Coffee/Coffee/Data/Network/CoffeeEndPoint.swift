@@ -12,6 +12,8 @@ enum CoffeeEndPoint: EndPoint {
     
     case Login(Encodable)
     case Register(Encodable)
+    case ForgotPassword(Encodable)
+    case ResetPassword(Encodable)
     
     var path: String {
         switch self {
@@ -19,33 +21,49 @@ enum CoffeeEndPoint: EndPoint {
             return "/auth/login"
         case .Register:
             return "/auth/register_user"
+        case .ForgotPassword:
+            return ""
+        case .ResetPassword:
+            return ""
         }
     }
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .Login, .Register:
+        case .Login,
+             .Register,
+             .ForgotPassword,
+             .ResetPassword:
             return .post
         }
     }
     
     var header: HTTPHeaders? {
         switch self {
-        case .Login, .Register:
+        case .Login, 
+             .Register,
+             .ForgotPassword,
+             .ResetPassword:
             return nil
         }
     }
     
     var parameter: Parameters? {
         switch self {
-        case let .Login(request), let .Register(request):
+        case let .Login(request), 
+             let .Register(request),
+             let .ForgotPassword(request),
+             let .ResetPassword(request):
             return request.toDict()
         }
     }
     
     var encoding: ParameterEncoding {
         switch self {
-        case .Login, .Register:
+        case .Login,
+             .Register,
+             .ForgotPassword,
+             .ResetPassword:
             return JSONEncoding.default
         }
     }

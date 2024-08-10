@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResetPasswordVC: UIViewController {
+class ResetPasswordVC: UIViewController, Storyboarded {
 
     @IBOutlet weak var tfPasswordView: UIView!
     @IBOutlet weak var tfConfirmPasswordView: UIView!
@@ -18,6 +18,8 @@ class ResetPasswordVC: UIViewController {
     @IBOutlet weak var lblPasswordError: UILabel!
     @IBOutlet weak var lblConfirmPasswordError: UILabel!
     @IBOutlet weak var btnReset: UIButton!
+    
+    static var storyboardName: String = "Auth"
     
     private var showPassword: Bool = false {
         didSet {
@@ -64,7 +66,7 @@ class ResetPasswordVC: UIViewController {
     }
 
     @objc func onTapReset() {
-        
+        self.vm.reset()
     }
     
     private func clearError() {
@@ -82,7 +84,7 @@ class ResetPasswordVC: UIViewController {
 extension ResetPasswordVC: ResetPasswordViewDelegate {
     
     func onSuccesss() {
-        
+        //MARK: ToDo
     }
     
     func onValidate(validationError: [ResetPasswordVM.FormInput]) {
@@ -104,8 +106,8 @@ extension ResetPasswordVC: ResetPasswordViewDelegate {
         }
     }
     
-    func onFailed(error: String) {
-        
+    func onError(error: String) {
+        //MARK: ToDo
     }
     
 }

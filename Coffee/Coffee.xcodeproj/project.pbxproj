@@ -32,6 +32,10 @@
 		066E33322C650E9B003E4387 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33312C650E9B003E4387 /* Array.swift */; };
 		066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33342C651726003E4387 /* ResetPasswordVC.swift */; };
 		066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33362C6518F1003E4387 /* ResetPasswordVM.swift */; };
+		066E33A12C67122F003E4387 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A02C67122F003E4387 /* ResetPasswordRequest.swift */; };
+		066E33A32C671290003E4387 /* ResetPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A22C671290003E4387 /* ResetPasswordResponse.swift */; };
+		066E33A52C671299003E4387 /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A42C671299003E4387 /* ForgotPasswordResponse.swift */; };
+		066E33A72C67150F003E4387 /* ForgotPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A62C67150F003E4387 /* ForgotPasswordRequest.swift */; };
 		069EEA452C6114CE00DB10DE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069EEA442C6114CE00DB10DE /* String.swift */; };
 		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
 		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
@@ -71,6 +75,10 @@
 		066E33312C650E9B003E4387 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		066E33342C651726003E4387 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		066E33362C6518F1003E4387 /* ResetPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVM.swift; sourceTree = "<group>"; };
+		066E33A02C67122F003E4387 /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
+		066E33A22C671290003E4387 /* ResetPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordResponse.swift; sourceTree = "<group>"; };
+		066E33A42C671299003E4387 /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponse.swift; sourceTree = "<group>"; };
+		066E33A62C67150F003E4387 /* ForgotPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRequest.swift; sourceTree = "<group>"; };
 		069EEA442C6114CE00DB10DE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
@@ -202,6 +210,8 @@
 			children = (
 				065EDC872C60CCF500095316 /* LoginRequest.swift */,
 				16F294D22C62666200A8BE97 /* RegisterRequest.swift */,
+				066E33A02C67122F003E4387 /* ResetPasswordRequest.swift */,
+				066E33A62C67150F003E4387 /* ForgotPasswordRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				065EDC852C60CC2E00095316 /* LoginResponse.swift */,
+				066E33A22C671290003E4387 /* ResetPasswordResponse.swift */,
+				066E33A42C671299003E4387 /* ForgotPasswordResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -438,11 +450,13 @@
 				065EDC782C60C7FC00095316 /* CoffeeRequestInterceptor.swift in Sources */,
 				065EDC862C60CC2E00095316 /* LoginResponse.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
+				066E33A12C67122F003E4387 /* ResetPasswordRequest.swift in Sources */,
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
 				063AE4252C650ABF0020531D /* ForgotPasswordVM.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
+				066E33A52C671299003E4387 /* ForgotPasswordResponse.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
@@ -456,7 +470,9 @@
 				066E33322C650E9B003E4387 /* Array.swift in Sources */,
 				065EDC762C60C7AA00095316 /* CoffeeEndPoint.swift in Sources */,
 				065EDC7F2C60C98C00095316 /* NSNotification.swift in Sources */,
+				066E33A32C671290003E4387 /* ResetPasswordResponse.swift in Sources */,
 				065EDC8E2C60D22600095316 /* LoginVM.swift in Sources */,
+				066E33A72C67150F003E4387 /* ForgotPasswordRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

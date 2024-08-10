@@ -10,7 +10,7 @@ import Foundation
 protocol ResetPasswordViewDelegate {
     func onSuccesss()
     func onValidate(validationError: [ResetPasswordVM.FormInput])
-    func onFailed(error: String)
+    func onError(error: String)
 }
 
 class ResetPasswordVM {
@@ -63,7 +63,23 @@ class ResetPasswordVM {
         self.delegate.onValidate(validationError: errors)
     }
     
-    func submit() {
-        
+    func reset() {
+        self.repository.resetPassword(
+            newPassowrd: password!,
+            confirmPassword: confirmPassword!
+        ) { [weak self] in
+            //MARK: ToDo
+            self?.delegate.onSuccesss()
+        } onFailed: { [weak self] error in
+            switch error {
+            case .NEW_USER:
+                self?.delegate.onError(error: "Your email is not registered yet")
+            case .UNKNOWN(let error):
+                self?.delegate.onError(error: error)
+            default:
+                break
+            }
+        }
+
     }
 }

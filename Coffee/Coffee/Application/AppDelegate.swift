@@ -20,20 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
-
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-                // Show the app's signed-out state.
-            } else {
-                // Show the app's signed-in state.
-                // print(user?.accessToken.tokenString)
-                // print(user?.profile?.email)
-            }
-        }
-        
-        if let accessToken = AccessToken.current {
-            print("Already sign-in with facebook")
-        }
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         

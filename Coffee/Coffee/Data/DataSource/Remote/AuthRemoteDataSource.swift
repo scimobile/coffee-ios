@@ -80,4 +80,60 @@ class AuthRemoteDataSource {
         }
         
     }
+    
+    func forgotPassword(
+        email: String,
+        onSuccess: @escaping () -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    )
+    {
+        let request = ForgotPasswordRequest(email: email)
+        
+        network.request(endPoint: .ForgotPassword(request)) { (response: ForgotPasswordResponse) in
+            //MARK: ToDo
+            onSuccess()
+        } onFailed: { [weak self] error in
+            switch error {
+                case .UNEXPECTED_STATUS_CODE(let code):
+                    if code == self?.newUserErrorCode {
+                        onFailed(.NEW_USER)
+                    }
+                    else {
+                        onFailed(.UNKNOWN(error.customMessage))
+                    }
+                default:
+                    onFailed(.UNKNOWN(error.customMessage))
+            }
+        }
+    }
+    
+    func resetPassword(
+        newPassword: String,
+        confirmPassword: String,
+        onSuccess: @escaping () -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    )
+    {
+        let request = ResetPasswordRequest(
+            newPassword: newPassword,
+            confirmPassword: confirmPassword
+        )
+        
+        network.request(endPoint: .ResetPassword(request)) { (response: ResetPasswordResponse) in
+            //MARK: ToDo
+            onSuccess()
+        } onFailed: { [weak self] error in
+            switch error {
+                case .UNEXPECTED_STATUS_CODE(let code):
+                    if code == self?.newUserErrorCode {
+                        onFailed(.NEW_USER)
+                    }
+                    else {
+                        onFailed(.UNKNOWN(error.customMessage))
+                    }
+                default:
+                    onFailed(.UNKNOWN(error.customMessage))
+            }
+        }
+    }
 }

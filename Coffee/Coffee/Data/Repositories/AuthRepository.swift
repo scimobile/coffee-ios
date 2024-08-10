@@ -40,12 +40,38 @@ class AuthRepository {
             email: email,
             phoneNumber: phoneNumber,
             password: password,
-            onSuccess: { token in
-                KeychainManager.shared.setAccessToken(with: token)
-                onSuccess()
-            },
-            onFailed: onFailed
-        )
-
+        onSuccess: { token in
+            KeychainManager.shared.setAccessToken(with: token)
+            onSuccess()
+        },
+        onFailed: onFailed)
+    }
+    
+    func forgotPassword(
+        email: String,
+        onSuccess: @escaping () -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    )
+    {
+        remoteDataSource.forgotPassword(
+            email: email,
+        onSuccess: {
+            //MARK: ToDo
+        }, onFailed: onFailed)
+    }
+    
+    func resetPassword(
+        newPassowrd: String,
+        confirmPassword: String,
+        onSuccess: @escaping () -> (),
+        onFailed: @escaping (AuthDataError) -> ()
+    )
+    {
+        remoteDataSource.resetPassword(
+            newPassword: newPassowrd,
+            confirmPassword: confirmPassword,
+        onSuccess: {
+            //MARK: ToDo
+        }, onFailed: onFailed)
     }
 }
