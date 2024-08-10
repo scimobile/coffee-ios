@@ -133,7 +133,12 @@ class RegisterVM {
     }
     
     func registerFacebook(_ parentVC: UIViewController) {
-        
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: parentVC) { result, error in
+            guard error == nil else { return }
+            guard let token = result?.token?.tokenString else { return }
+            //MARK: ToDo
+        }
     }
     
 }
