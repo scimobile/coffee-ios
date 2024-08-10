@@ -9,15 +9,21 @@ import UIKit
 
 class OnboardingCell: UICollectionViewCell {
 
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var ivImage: UIImageView!
-    @IBOutlet weak var desLabel: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var lblDes: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        title.font = UIFont(name: "Poppins-Bold", size: 24)
-        desLabel.font = UIFont(name: "Poppins-Regular", size: 16)
-        ivImage.contentMode = .scaleAspectFit
+        lblTitle.font = AppFont.poppinsBold.of(size: 24)
+        lblDes.font = AppFont.poppinsRegular.of(size: 16)
+        iconImage.contentMode = .scaleAspectFit
     }
 
+    func setup(onboardingItem:OnboardingPage) {
+        lblTitle.text = onboardingItem.title
+        iconImage.image = UIImage(named: onboardingItem.imageName)
+        lblDes.text = onboardingItem.description
+    }
+    
 }

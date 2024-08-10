@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
         var rootVC:UIViewController? = nil
         
-        if UserDefaults.standard.bool(forKey: "hasUsedAppBefore"){
+        if UserDefaults.standard.bool(forKey: UserDefaultsKeys.hasUsedAppBefore){
             // GO to Login
             print("Go to Login In")
         }else{

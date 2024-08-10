@@ -19,6 +19,9 @@
 		FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */; };
 		FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE792C61EE090062EE9E /* OnboardingPage.swift */; };
 		FF55DE7F2C61EE740062EE9E /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */; };
+		FF5D46572C67D37C00679635 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D46562C67D37C00679635 /* UserDefaultsKeys.swift */; };
+		FF5D46592C67D93300679635 /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D46582C67D93300679635 /* OnboardingVM.swift */; };
+		FF5D465B2C67DE1A00679635 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D465A2C67DE1A00679635 /* AppFont.swift */; };
 		FF6515882C62692C0030805C /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6515872C62692C0030805C /* RootNC.swift */; };
 		FFEF8F5D2C63B52E002BA7BC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEF8F5C2C63B52E002BA7BC /* Onboarding.storyboard */; };
 		FFEF8F642C63B9C0002BA7BC /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF8F622C63B9C0002BA7BC /* OnboardingCell.swift */; };
@@ -39,6 +42,9 @@
 		FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		FF55DE792C61EE090062EE9E /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		FF5D46562C67D37C00679635 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		FF5D46582C67D93300679635 /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
+		FF5D465A2C67DE1A00679635 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		FF6515872C62692C0030805C /* RootNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 		FFEF8F5C2C63B52E002BA7BC /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		FFEF8F622C63B9C0002BA7BC /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 		FEEABF362C6003810089CB35 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FF5D46552C67D36A00679635 /* local */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 				FEEABF3B2C6004020089CB35 /* Poppins-Medium.ttf */,
 				FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */,
 				FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */,
+				FF5D465A2C67DE1A00679635 /* AppFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -196,8 +204,17 @@
 			isa = PBXGroup;
 			children = (
 				FF55DE7D2C61EE740062EE9E /* OnboardingVC.swift */,
+				FF5D46582C67D93300679635 /* OnboardingVM.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FF5D46552C67D36A00679635 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D46562C67D37C00679635 /* UserDefaultsKeys.swift */,
+			);
+			path = local;
 			sourceTree = "<group>";
 		};
 		FF6515862C6269140030805C /* Navigation */ = {
@@ -309,7 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6515882C62692C0030805C /* RootNC.swift in Sources */,
+				FF5D46572C67D37C00679635 /* UserDefaultsKeys.swift in Sources */,
+				FF5D465B2C67DE1A00679635 /* AppFont.swift in Sources */,
 				FFEF8F642C63B9C0002BA7BC /* OnboardingCell.swift in Sources */,
+				FF5D46592C67D93300679635 /* OnboardingVM.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				FF55DE7B2C61EE090062EE9E /* OnboardingPage.swift in Sources */,
