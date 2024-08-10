@@ -16,7 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Auth</string>
+					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
@@ -28,29 +28,28 @@
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-SemiBold.ttf</string>
 	</array>
-    <key>GIDClientID</key>
-    <string>920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3.apps.googleusercontent.com</string>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>com.googleusercontent.apps.920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3</string>
-        </array>
-      </dict>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb2318942351775002</string>
-        </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>2318942351775002</string>
-    <key>FacebookClientToken</key>
-    <string>0bfece53cf95ebc6d70c9d6382a547d3</string>
-    <key>FacebookDisplayName</key>
-    <string>Coffee</string>
+	<key>GIDClientID</key>
+	<string>920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2318942351775002</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>2318942351775002</string>
+	<key>FacebookClientToken</key>
+	<string>0bfece53cf95ebc6d70c9d6382a547d3</string>
+	<key>FacebookDisplayName</key>
+	<string>Coffee</string>
 </dict>
 </plist>
