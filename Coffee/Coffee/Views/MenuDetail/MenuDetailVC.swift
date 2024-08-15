@@ -68,11 +68,6 @@ class MenuDetailVC: UIViewController {
     @IBOutlet weak var lbl50: UILabel!
     @IBOutlet weak var btn50: UIButton!
     
-    
-    @IBOutlet weak var txtMilk: UITextField!
-    @IBOutlet weak var txtTopping: UITextField!
-    @IBOutlet weak var txtInstruction: UITextField!
-    
     @IBOutlet weak var lblSpecial: UILabel!
   
     //For Viwe
@@ -90,12 +85,36 @@ class MenuDetailVC: UIViewController {
     @IBOutlet weak var btnAddtoCart: UIButton!
     @IBOutlet weak var lblCount: UILabel!
     
+    @IBOutlet weak var txtView: UITextView!
+    
+    //MilkView
+    @IBOutlet weak var txtMilkpick: UITextField!
+    @IBOutlet weak var btnMilk: UIButton!
+    
+    @IBOutlet weak var txtToppingpick: UITextField!
+    @IBOutlet weak var btnTopping: UIButton!
+    
     
     lazy var pickerView:UIPickerView = {
         let picker = UIPickerView()
         return picker
     
     }()
+    
+    func getToolbar() -> UIToolbar {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        
+        // transparent
+        toolBar.isTranslucent = true
+        toolBar.sizeToFit()
+        
+        //UIbutton in toolbar
+        let doneBtn = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(doneBtnTapped))
+        toolBar.setItems([doneBtn], animated: true)
+
+        return toolBar
+    }
     
     var count:Int = 0 {
         didSet{
@@ -121,22 +140,62 @@ class MenuDetailVC: UIViewController {
             applyShadow(to: view)
         }
         
+        txtView.layer.borderColor = UIColor.gray.cgColor
+        txtView.layer.borderWidth = 0.5
+        txtView.layer.cornerRadius = 5.0 // Optional: for rounded corners
+        txtView.textColor = UIColor.gray
     }
     
     private func setupBindings(){
         [btnSmall,btnMedium,btnLarge,btnHot,btnCold,btnNone,btn30,btn50].addTarget(selector: #selector(onChangeSelection(_:)))
         
-        txtMilk.addTarget(self, action: #selector(onMilkTapped), for: .editingDidBegin)
-        txtTopping.addTarget(self, action: #selector(onToppingTapped), for: .editingDidBegin)
+        txtMilkpick.addTarget(self, action: #selector(onMilkChange), for: .editingChanged)
+        txtToppingpick.addTarget(self, action: #selector(onToppingChange), for: .editingChanged)
         
         btnMinus.addTarget(self, action: #selector(decrementTapped), for: .touchUpInside)
         btnPlus.addTarget(self, action: #selector(incrementTapped), for: .touchUpInside)
         
+        btnMilk.addTarget(self, action: #selector(showMilkPicker), for: .touchUpInside)
+        btnTopping.addTarget(self, action: #selector(showToppingPicker), for: .touchUpInside)
+        
         pickerView.delegate = self
         pickerView.dataSource = self
-        txtMilk.inputView = pickerView
-        txtTopping.inputView = pickerView
         
+    }
+    
+    @objc func onMilkChange(){
+        
+    }
+    
+    @objc func onToppingChange(){
+        
+    }
+    
+    func showPicker(for pickerType: PickerType, textField: UITextField) {
+        currentPickerType = pickerType
+        textField.inputView = pickerView
+        textField.inputAccessoryView = getToolbar()
+        pickerView.reloadAllComponents()
+        textField.becomeFirstResponder()
+    }
+
+    @objc func showMilkPicker() {
+        showPicker(for: .MILK, textField: txtMilkpick)
+    }
+
+    @objc func showToppingPicker() {
+        showPicker(for: .TOPPING, textField: txtToppingpick)
+    }
+    
+    @objc func doneBtnTapped(){
+        switch currentPickerType {
+        case .MILK:
+            txtMilkpick.resignFirstResponder()
+        case .TOPPING:
+            txtToppingpick.resignFirstResponder()
+        default:
+            print()
+        }
     }
     
     
@@ -150,7 +209,6 @@ class MenuDetailVC: UIViewController {
     }
     
     func initialState(){
-        
         //For Size
         updateSelection(
             selectedView: viewSmall,
@@ -282,16 +340,6 @@ class MenuDetailVC: UIViewController {
         }
     }
     
-    @objc func onMilkTapped(){
-        currentPickerType = .MILK
-        pickerView.reloadAllComponents()
-    }
-    
-    @objc func onToppingTapped(){
-        currentPickerType = .TOPPING
-        pickerView.reloadAllComponents()
-    }
-    
     @objc func incrementTapped(){
         count += 1
     }
@@ -308,11 +356,11 @@ extension MenuDetailVC:UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch currentPickerType {
         case .MILK:
-            txtMilk.text = milkOptions[row]
+            txtMilkpick.text = milkOptions[row]
         case .TOPPING:
-            txtTopping.text = toppingOptions[row]
+            txtToppingpick.text = toppingOptions[row]
         default:
-            print("Hello")
+            print()
         }
     }
     
@@ -344,6 +392,8 @@ extension MenuDetailVC:UIPickerViewDataSource{
         return ""
         }
     }
+    
+    
     
     
 }
