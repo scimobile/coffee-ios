@@ -49,6 +49,9 @@
 		8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */; };
 		8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC32C737F9C001DF45A /* RootNC.swift */; };
 		8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC72C738663001DF45A /* AuthWrappers.swift */; };
+		8D6B9BCA2C738D51001DF45A /* MenuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */; };
+		8D6B9BCE2C738D71001DF45A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BCB2C738D71001DF45A /* Array.swift */; };
+		8D6B9BCF2C738D71001DF45A /* MenuDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */; };
 		FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF192C6002E80089CB35 /* AppDelegate.swift */; };
 		FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */; };
 		FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* ViewController.swift */; };
@@ -101,6 +104,9 @@
 		8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		8D6B9BC32C737F9C001DF45A /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 		8D6B9BC72C738663001DF45A /* AuthWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWrappers.swift; sourceTree = "<group>"; };
+		8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuDetail.storyboard; sourceTree = "<group>"; };
+		8D6B9BCB2C738D71001DF45A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailVC.swift; sourceTree = "<group>"; };
 		FEEABF162C6002E80089CB35 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEABF192C6002E80089CB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -343,6 +349,15 @@
 			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
+		8D6B9BCD2C738D71001DF45A /* MenuDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BCB2C738D71001DF45A /* Array.swift */,
+				8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */,
+			);
+			path = MenuDetail;
+			sourceTree = "<group>";
+		};
 		FEEABF0D2C6002E80089CB35 = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +412,7 @@
 		FEEABF322C6003500089CB35 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */,
 				065EDC912C60D24900095316 /* Auth.storyboard */,
 				FEEABF1F2C6002E80089CB35 /* Main.storyboard */,
 				FEEABF242C6002EA0089CB35 /* LaunchScreen.storyboard */,
@@ -407,6 +423,7 @@
 		FEEABF332C6003620089CB35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BCD2C738D71001DF45A /* MenuDetail */,
 				8D6B9BB32C737B67001DF45A /* Cell */,
 				8D6B9BB02C737B67001DF45A /* Onboarding */,
 				065EDC8C2C60D21900095316 /* Auth */,
@@ -499,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6B9BCA2C738D51001DF45A /* MenuDetail.storyboard in Resources */,
 				065EDC922C60D24900095316 /* Auth.storyboard in Resources */,
 				FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */,
 				FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */,
@@ -518,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6B9BCF2C738D71001DF45A /* MenuDetailVC.swift in Sources */,
 				8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */,
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
@@ -539,6 +558,7 @@
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
 				8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */,
+				8D6B9BCE2C738D71001DF45A /* Array.swift in Sources */,
 				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
 				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
