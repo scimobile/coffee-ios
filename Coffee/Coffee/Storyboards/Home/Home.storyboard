@@ -174,8 +174,20 @@
                     <view key="view" contentMode="scaleToFill" id="r3w-4R-2v0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-mw-8kB">
+                                <rect key="frame" x="148" y="406.66666666666669" width="97" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y42-2r-xKG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r8w-mw-8kB" firstAttribute="centerY" secondItem="r3w-4R-2v0" secondAttribute="centerY" id="YUF-yP-Zlf"/>
+                            <constraint firstItem="r8w-mw-8kB" firstAttribute="centerX" secondItem="r3w-4R-2v0" secondAttribute="centerX" id="lTI-ji-uQr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A4c-zW-4NN"/>
                 </viewController>

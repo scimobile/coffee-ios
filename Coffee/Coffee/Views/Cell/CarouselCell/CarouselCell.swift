@@ -16,7 +16,7 @@ class CarouselCell: UITableViewCell {
     weak var delegate: CarouselCellDelegate?
     
     @IBOutlet weak var lblCarouselTitle: UILabel!
-    @IBOutlet weak var cvCarousel: DynamicHeightCV!
+    @IBOutlet weak var cvCarousel: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +25,10 @@ class CarouselCell: UITableViewCell {
         cvCarousel.delegate = self
         cvCarousel.dataSource = self
         
-        let layout = SnappingFlowLayout()
-        layout.scrollDirection = .horizontal
+//        let layout = SnappingFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        cvCarousel.collectionViewLayout = layout
         
-        cvCarousel.collectionViewLayout = layout
         cvCarousel.decelerationRate = .fast
         selectionStyle = .none
         
@@ -76,7 +76,7 @@ extension CarouselCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 30)
+        UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 30)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

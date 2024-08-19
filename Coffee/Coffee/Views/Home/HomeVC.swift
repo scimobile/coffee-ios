@@ -46,13 +46,18 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //search bar
-        title = "Home"
+
+        setupCustomTitle()
+        setupProfilePicture()
+        
         navigationItem.searchController = searchController
+        
         setupView()
 //        view.addSubview(floatingButton)
 //        floatingButton.addSubview(badgeLabel)
         setupFloatingCartButton()
+        
+        
 
     }
     
@@ -90,6 +95,50 @@ class HomeVC: UIViewController {
         tvHome.showsVerticalScrollIndicator = false
         tvHome.showsHorizontalScrollIndicator = false
         
+    }
+    
+    func setupCustomTitle() {
+        let title = UILabel()
+        title.text = "Menu"
+        title.font = AppFont.poppinsSemibold.of(size: 40)
+        title.textColor = AppColor.secondary.color
+        
+        let titleBarItem = UIBarButtonItem(customView: title)
+//        navigationItem.titleView = title
+        navigationItem.leftBarButtonItem = titleBarItem
+    }
+    
+    func setupProfilePicture() {
+        let profileImage = UIImage(named: "profile")
+        let profileButton = UIButton(type: .custom)
+        profileButton.setImage(profileImage, for: .normal)
+        profileButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        profileButton.layer.cornerRadius = 20
+        profileButton.layer.masksToBounds = true
+        profileButton.addTarget(self, action: #selector(profileButtonTapped), for: .touchUpInside)
+        
+        profileButton.imageView?.contentMode = .scaleAspectFit
+        
+        let profileContainer = UIView()
+        profileContainer.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
+        profileContainer.addSubview(profileButton)
+        
+        profileButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            profileButton.centerXAnchor.constraint(equalTo: profileContainer.centerXAnchor),
+            profileButton.centerYAnchor.constraint(equalTo: profileContainer.centerYAnchor),
+            profileButton.widthAnchor.constraint(equalToConstant: 40),
+            profileButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        let profileBarItem = UIBarButtonItem(customView: profileButton)
+        navigationItem.rightBarButtonItem = profileBarItem
+    }
+    
+    @objc private func profileButtonTapped() {
+        let sb = UIStoryboard(name: "Home", bundle: .main)
+        guard let vc = sb.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func setupFloatingCartButton() {
