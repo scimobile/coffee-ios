@@ -18,6 +18,7 @@ class ResetPasswordVC: UIViewController, Storyboarded {
     @IBOutlet weak var lblPasswordError: UILabel!
     @IBOutlet weak var lblConfirmPasswordError: UILabel!
     @IBOutlet weak var btnReset: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     
     static var storyboardName: String = "Auth"
     
@@ -44,11 +45,13 @@ class ResetPasswordVC: UIViewController, Storyboarded {
     
     private func setUpBindings() {
         showPassword = false
+        btnReset.isEnabled = false
         tfPassword.addTarget(self, action: #selector(onChangePassword), for: .editingChanged)
         tfConfirmPassword.addTarget(self, action: #selector(onChangeConfirmPassword), for: .editingChanged)
         btnShowPasswordBtn.addTarget(self, action: #selector(onTapShowHidePassword), for: .touchUpInside)
         btnShowConfirmPasswordBtn.addTarget(self, action: #selector(onTapShowHidePassword), for: .touchUpInside)
         btnReset.addTarget(self, action: #selector(onTapReset), for: .touchUpInside)
+        btnBack.addTarget(self, action: #selector(onTapBack), for: .touchUpInside)
     }
     
     @objc func onTapShowHidePassword() {
@@ -67,6 +70,10 @@ class ResetPasswordVC: UIViewController, Storyboarded {
 
     @objc func onTapReset() {
         self.vm.reset()
+    }
+    
+    @objc func onTapBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func clearError() {

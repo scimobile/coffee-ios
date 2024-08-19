@@ -13,6 +13,7 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var lblEmailError: UILabel!
     @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     
     static var storyboardName: String = "Auth"
     
@@ -31,8 +32,10 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
     
     private func setUpBindings() {
+        btnSubmit.isEnabled = false
         tfEmail.addTarget(self, action: #selector(onChangeEmail), for: .editingChanged)
         btnSubmit.addTarget(self, action: #selector(onTapSubmit), for: .touchUpInside)
+        btnBack.addTarget(self, action: #selector(onTapBack), for: .touchUpInside)
     }
     
     @objc func onChangeEmail() {
@@ -40,7 +43,13 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapSubmit() {
-        self.vm.submit()
+        let vc = ResetPasswordVC.instantiate()
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.vm.submit()
+    }
+    
+    @objc func onTapBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func clearError() {

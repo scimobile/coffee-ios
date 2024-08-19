@@ -35,6 +35,8 @@ class RegisterVC: UIViewController, Storyboarded {
     @IBOutlet weak var btnFacebookLogin: UIButton!
     @IBOutlet weak var btnGoogleLogin: UIButton!
     
+    @IBOutlet weak var btnBack: UIButton!
+    
     static var storyboardName: String = "Auth"
     
     private var showPassword: Bool = false {
@@ -70,6 +72,7 @@ class RegisterVC: UIViewController, Storyboarded {
         
         btnRegisterBtn.addTarget(self, action: #selector(onTapRegister), for: .touchUpInside)
         btnLogin.addTarget(self, action: #selector(onTapLogin), for: .touchUpInside)
+        btnBack.addTarget(self, action: #selector(onTapLogin), for: .touchUpInside)
         btnFacebookLogin.addTarget(self, action: #selector(onTapFacebookLogin), for: .touchUpInside)
         btnGoogleLogin.addTarget(self, action: #selector(onTapGoogleLogin), for: .touchUpInside)
         
