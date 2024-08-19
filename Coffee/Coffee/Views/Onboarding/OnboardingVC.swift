@@ -7,7 +7,9 @@
 
 import UIKit
 
-class OnboardingVC: UIViewController {
+class OnboardingVC: UIViewController, Storyboarded {
+    
+    static var storyboardName: String = "Main"
     
     @IBOutlet weak var cvOnboarding:UICollectionView!
     @IBOutlet weak var pageControl:UIPageControl!
@@ -51,6 +53,7 @@ class OnboardingVC: UIViewController {
             UserDefaults.standard.set(true, forKey: UserDefaultsKeys.hasUsedAppBefore)
             /// TODO : GO TO LOGIN
             print("Go to Login")
+            self.navigationController?.pushViewController(LoginVC.instantiate(), animated: true)
         }
         updateBtnTitle()
     }
