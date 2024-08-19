@@ -84,7 +84,7 @@ class RegisterVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapLogin() {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func onTapRegister() {

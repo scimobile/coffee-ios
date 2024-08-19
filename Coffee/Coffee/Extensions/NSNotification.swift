@@ -9,4 +9,5 @@ import Foundation
 
 extension NSNotification.Name {
     static let TokenExpiredNotification = NSNotification.Name("token_expired")
+    static let OnboardingDone = NSNotification.Name("onboarding_done")
 }

@@ -40,6 +40,15 @@
 		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
 		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
 		16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D22C62666200A8BE97 /* RegisterRequest.swift */; };
+		8D6B9BB42C737B67001DF45A /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BAE2C737B67001DF45A /* OnboardingVC.swift */; };
+		8D6B9BB52C737B67001DF45A /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BAF2C737B67001DF45A /* OnboardingVM.swift */; };
+		8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */; };
+		8D6B9BB72C737B67001DF45A /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */; };
+		8D6B9BBA2C737B91001DF45A /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB82C737B91001DF45A /* UserDefaultsKeys.swift */; };
+		8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBB2C737BC5001DF45A /* AppFont.swift */; };
+		8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */; };
+		8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC32C737F9C001DF45A /* RootNC.swift */; };
+		8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC72C738663001DF45A /* AuthWrappers.swift */; };
 		FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF192C6002E80089CB35 /* AppDelegate.swift */; };
 		FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */; };
 		FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* ViewController.swift */; };
@@ -83,6 +92,15 @@
 		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		16F294D22C62666200A8BE97 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		8D6B9BAE2C737B67001DF45A /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		8D6B9BAF2C737B67001DF45A /* OnboardingVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
+		8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
+		8D6B9BB82C737B91001DF45A /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		8D6B9BBB2C737BC5001DF45A /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		8D6B9BC32C737F9C001DF45A /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
+		8D6B9BC72C738663001DF45A /* AuthWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWrappers.swift; sourceTree = "<group>"; };
 		FEEABF162C6002E80089CB35 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEABF192C6002E80089CB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +161,7 @@
 		065EDC6C2C60C6FB00095316 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BC62C738653001DF45A /* PropertyWrappers */,
 				061E335D2C63BFB700F2390C /* Storyboarded.swift */,
 			);
 			path = Utils;
@@ -162,6 +181,7 @@
 		065EDC6E2C60C70B00095316 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BB92C737B91001DF45A /* local */,
 				065EDC6F2C60C71700095316 /* NetworkManager.swift */,
 				065EDC712C60C77A00095316 /* NetworkError.swift */,
 				065EDC732C60C78E00095316 /* EndPoint.swift */,
@@ -199,6 +219,7 @@
 		065EDC822C60CC0A00095316 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BBE2C737C88001DF45A /* Onboarding */,
 				065EDC842C60CC2300095316 /* Response */,
 				065EDC832C60CC1900095316 /* Request */,
 			);
@@ -272,6 +293,56 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		8D6B9BB02C737B67001DF45A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BAE2C737B67001DF45A /* OnboardingVC.swift */,
+				8D6B9BAF2C737B67001DF45A /* OnboardingVM.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8D6B9BB32C737B67001DF45A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */,
+				8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8D6B9BB92C737B91001DF45A /* local */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BB82C737B91001DF45A /* UserDefaultsKeys.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		8D6B9BBE2C737C88001DF45A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8D6B9BC42C737F9C001DF45A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BC32C737F9C001DF45A /* RootNC.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8D6B9BC62C738653001DF45A /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B9BC72C738663001DF45A /* AuthWrappers.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
 		FEEABF0D2C6002E80089CB35 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +366,7 @@
 				065EDC6B2C60C6EA00095316 /* Extensions */,
 				065EDC6C2C60C6FB00095316 /* Utils */,
 				065EDC6D2C60C70500095316 /* Data */,
+				8D6B9BC42C737F9C001DF45A /* Navigation */,
 				FEEABF332C6003620089CB35 /* Views */,
 				FEEABF322C6003500089CB35 /* Storyboards */,
 				FEEABF312C60033D0089CB35 /* Application */,
@@ -335,6 +407,8 @@
 		FEEABF332C6003620089CB35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BB32C737B67001DF45A /* Cell */,
+				8D6B9BB02C737B67001DF45A /* Onboarding */,
 				065EDC8C2C60D21900095316 /* Auth */,
 				FEEABF1D2C6002E80089CB35 /* ViewController.swift */,
 			);
@@ -344,6 +418,7 @@
 		FEEABF3A2C6003D60089CB35 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8D6B9BBB2C737BC5001DF45A /* AppFont.swift */,
 				FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */,
 				FEEABF3B2C6004020089CB35 /* Poppins-Medium.ttf */,
 				FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */,
@@ -427,6 +502,7 @@
 				065EDC922C60D24900095316 /* Auth.storyboard in Resources */,
 				FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */,
 				FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */,
+				8D6B9BB72C737B67001DF45A /* OnboardingCell.xib in Resources */,
 				FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */,
 				FEEABF3F2C6004020089CB35 /* Poppins-Medium.ttf in Resources */,
 				FEEABF262C6002EA0089CB35 /* Base in Resources */,
@@ -442,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */,
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
@@ -451,6 +528,7 @@
 				065EDC862C60CC2E00095316 /* LoginResponse.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
 				066E33A12C67122F003E4387 /* ResetPasswordRequest.swift in Sources */,
+				8D6B9BB42C737B67001DF45A /* OnboardingVC.swift in Sources */,
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
@@ -460,14 +538,20 @@
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
+				8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */,
+				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
 				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
+				8D6B9BBA2C737B91001DF45A /* UserDefaultsKeys.swift in Sources */,
+				8D6B9BB52C737B67001DF45A /* OnboardingVM.swift in Sources */,
+				8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */,
 				065EDC722C60C77A00095316 /* NetworkError.swift in Sources */,
 				065EDC902C60D23400095316 /* LoginVC.swift in Sources */,
 				069EEA452C6114CE00DB10DE /* String.swift in Sources */,
 				065EDC812C60CAA000095316 /* AuthRemoteDataSource.swift in Sources */,
 				065EDC8B2C60D0B200095316 /* AuthRepository.swift in Sources */,
 				066E33322C650E9B003E4387 /* Array.swift in Sources */,
+				8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */,
 				065EDC762C60C7AA00095316 /* CoffeeEndPoint.swift in Sources */,
 				065EDC7F2C60C98C00095316 /* NSNotification.swift in Sources */,
 				066E33A32C671290003E4387 /* ResetPasswordResponse.swift in Sources */,

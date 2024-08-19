@@ -76,10 +76,13 @@ class LoginVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapSignUp() {
+        let vc = RegisterVC.instantiate()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func onTapForgotPassword() {
-        
+        let vc = ForgotPasswordVC.instantiate()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func onTapFacebookLogin() {
@@ -105,6 +108,8 @@ extension LoginVC: LoginViewDelegate {
     
     func onNewUser() {
         //MARK: ToDo
+        let vc = RegisterVC.instantiate()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func onValidate(validationError: [LoginVM.FormInput]) {
