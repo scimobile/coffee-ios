@@ -41,6 +41,8 @@ class RootNC: UINavigationController {
     
     func goToHome() {
         // TBD
+        let vc = TabVC.instantiate()
+        setViewControllers([vc], animated: true)
     }
     
     func goToLogin() {
