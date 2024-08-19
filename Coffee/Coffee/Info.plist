@@ -2,6 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2318942351775002</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>2318942351775002</string>
+	<key>FacebookClientToken</key>
+	<string>0bfece53cf95ebc6d70c9d6382a547d3</string>
+	<key>FacebookDisplayName</key>
+	<string>Coffee</string>
+	<key>GIDClientID</key>
+	<string>920727667870-npf0e1b8ofke6rl4at2pe8r0lkmctnd3.apps.googleusercontent.com</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,12 +51,5 @@
 			</array>
 		</dict>
 	</dict>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Poppins-Bold.ttf</string>
-        <string>Poppins-Medium.ttf</string>
-        <string>Poppins-Regular.ttf</string>
-        <string>Poppins-SemiBold.ttf</string>
-    </array>
 </dict>
 </plist>

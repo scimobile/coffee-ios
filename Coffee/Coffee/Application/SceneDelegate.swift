@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FacebookCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        self.window = UIWindow(windowScene: windowScene)
+//
+//        // Set Onboarding storyboard as initial storyboard
+//        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//        var rootVC:UIViewController? = nil
+//        
+//        if UserDefaults.standard.bool(forKey: UserDefaultsKeys.hasUsedAppBefore){
+//            // GO to Login
+//            print("Go to Login In")
+//            if KeychainManager.shared.getAccessToken() != nil || KeychainManager.shared.getAccessToken() != "" {
+//                // Go To Home
+//                print("Go to Home")
+//                rootVC = LoginVC.instantiate()
+//            } else {
+//                rootVC = LoginVC.instantiate()
+//            }
+//        }else{
+//            rootVC = OnboardingVC.instantiate()
+//        }
+//
+//        // Instantiate the initial view controller
+//        window?.rootViewController = UINavigationController(rootViewController: rootVC!)
+//        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +71,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        
+        guard let url = URLContexts.first?.url else { return }
+        
+        ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            open: url,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+        )
+    }
 }
 
