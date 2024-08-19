@@ -14,7 +14,7 @@ class HomeVC: UIViewController {
     private var badgeLabel: UILabel!
     private var cartItems: [IndexPath] = []
     
-    let searchController = UISearchController(searchResultsController: UIViewController())
+    let searchController = UISearchController(searchResultsController: SearchResultsVC())
     
 //    let floatingButton: UIButton = {
 //        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
@@ -49,8 +49,8 @@ class HomeVC: UIViewController {
 
         setupCustomTitle()
         setupProfilePicture()
+        setupSearchController()
         
-        navigationItem.searchController = searchController
         
         setupView()
 //        view.addSubview(floatingButton)
@@ -78,6 +78,13 @@ class HomeVC: UIViewController {
 //            height: badgeSize
 //        )
 //    }
+    
+    func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        navigationItem.searchController = searchController
+        
+    }
     
     func setupView() {
         tvHome.registerCell(ofType: BannerCell.self)
@@ -200,6 +207,16 @@ class HomeVC: UIViewController {
         badgeLabel.text = "\(itemCount)"
         badgeLabel.isHidden = itemCount == 0
     }
+}
+
+extension HomeVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+//        guard let text = searchController.searchBar.text else { return }
+    }
+}
+
+extension HomeVC: UISearchControllerDelegate {
+    
 }
 
 extension HomeVC: CarouselCellDelegate {

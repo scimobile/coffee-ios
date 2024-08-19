@@ -53,11 +53,39 @@
                     <navigationItem key="navigationItem" id="nxw-T7-71R"/>
                     <connections>
                         <outlet property="tvHome" destination="k1b-Al-I5d" id="8TM-Uf-5dX"/>
+                        <segue destination="tx0-B4-t4g" kind="showDetail" id="uT6-c4-qHl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6Z-Ii-0Hd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770.2290076335878" y="464.78873239436621"/>
+            <point key="canvasLocation" x="-770" y="465"/>
+        </scene>
+        <!--Search ResultsVC-->
+        <scene sceneID="wyY-ug-zHp">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tx0-B4-t4g" customClass="SearchResultsVC" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovD-tb-4rE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omX-hM-4wb">
+                                <rect key="frame" x="85.000000000000014" y="402" width="223.33333333333337" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uUT-ei-rlC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="omX-hM-4wb" firstAttribute="centerY" secondItem="ovD-tb-4rE" secondAttribute="centerY" id="9Cv-qd-ixM"/>
+                            <constraint firstItem="omX-hM-4wb" firstAttribute="centerX" secondItem="ovD-tb-4rE" secondAttribute="centerX" id="FL4-oT-mnB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejP-9G-Ueg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="1207"/>
         </scene>
         <!--Item-->
         <scene sceneID="VQe-rX-p1q">
