@@ -15,4 +15,33 @@ extension Array where Element == UIView {
             item.layer.borderColor = color.cgColor
         }
     }
+    
+    func backgroundColor(_ color: UIColor) {
+        self.forEach { item in
+            item.backgroundColor = color
+        }
+    }
+    
+    func tintColor(_ color: UIColor) {
+        self.forEach { item in
+            item.tintColor = color
+        }
+    }
+    
+    func addFont(_ font: UIFont) {
+        self.forEach { item in
+            switch item {
+            case let label as UILabel:
+                label.font = font
+            case let button as UIButton:
+                button.titleLabel?.font = font
+            case let textField as UITextField:
+                textField.font = font
+            case let textView as UITextView:
+                textView.font = font
+            default:
+                break
+            }
+        }
+    }
 }

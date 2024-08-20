@@ -37,6 +37,11 @@
 		066E33A52C671299003E4387 /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A42C671299003E4387 /* ForgotPasswordResponse.swift */; };
 		066E33A72C67150F003E4387 /* ForgotPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E33A62C67150F003E4387 /* ForgotPasswordRequest.swift */; };
 		069EEA452C6114CE00DB10DE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069EEA442C6114CE00DB10DE /* String.swift */; };
+		06AF06BE2C744A9E006CB1B0 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06BD2C744A9E006CB1B0 /* Regex.swift */; };
+		06AF06C02C744B7D006CB1B0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06BF2C744B7D006CB1B0 /* UIColor.swift */; };
+		06AF06D52C7468F0006CB1B0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D42C7468F0006CB1B0 /* UIButton.swift */; };
+		06AF06D72C746BAA006CB1B0 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D62C746BAA006CB1B0 /* UICollectionView.swift */; };
+		06AF06D92C746C0C006CB1B0 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D82C746C0C006CB1B0 /* UITableView.swift */; };
 		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
 		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
 		16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D22C62666200A8BE97 /* RegisterRequest.swift */; };
@@ -45,7 +50,7 @@
 		8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */; };
 		8D6B9BB72C737B67001DF45A /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */; };
 		8D6B9BBA2C737B91001DF45A /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BB82C737B91001DF45A /* UserDefaultsKeys.swift */; };
-		8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBB2C737BC5001DF45A /* AppFont.swift */; };
+		8D6B9BBC2C737BC5001DF45A /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBB2C737BC5001DF45A /* UIFont.swift */; };
 		8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */; };
 		8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC32C737F9C001DF45A /* RootNC.swift */; };
 		8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC72C738663001DF45A /* AuthWrappers.swift */; };
@@ -89,6 +94,11 @@
 		066E33A42C671299003E4387 /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponse.swift; sourceTree = "<group>"; };
 		066E33A62C67150F003E4387 /* ForgotPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRequest.swift; sourceTree = "<group>"; };
 		069EEA442C6114CE00DB10DE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		06AF06BD2C744A9E006CB1B0 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		06AF06BF2C744B7D006CB1B0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		06AF06D42C7468F0006CB1B0 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		06AF06D62C746BAA006CB1B0 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		06AF06D82C746C0C006CB1B0 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		16F294D22C62666200A8BE97 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
@@ -97,7 +107,7 @@
 		8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 		8D6B9BB82C737B91001DF45A /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
-		8D6B9BBB2C737BC5001DF45A /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		8D6B9BBB2C737BC5001DF45A /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		8D6B9BC32C737F9C001DF45A /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 		8D6B9BC72C738663001DF45A /* AuthWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWrappers.swift; sourceTree = "<group>"; };
@@ -140,19 +150,17 @@
 			path = "Forgot Password";
 			sourceTree = "<group>";
 		};
-		065EDC6A2C60C6E000095316 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		065EDC6B2C60C6EA00095316 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				065EDC7E2C60C98C00095316 /* NSNotification.swift */,
+				06AF06BF2C744B7D006CB1B0 /* UIColor.swift */,
 				066B4EB72C60DE690004B6AF /* UIView.swift */,
+				06AF06D42C7468F0006CB1B0 /* UIButton.swift */,
+				06AF06D62C746BAA006CB1B0 /* UICollectionView.swift */,
+				06AF06D82C746C0C006CB1B0 /* UITableView.swift */,
 				069EEA442C6114CE00DB10DE /* String.swift */,
+				8D6B9BBB2C737BC5001DF45A /* UIFont.swift */,
 				066E33312C650E9B003E4387 /* Array.swift */,
 			);
 			path = Extensions;
@@ -275,6 +283,14 @@
 			path = "Reset Password";
 			sourceTree = "<group>";
 		};
+		06AF06BC2C744A8F006CB1B0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				06AF06BD2C744A9E006CB1B0 /* Regex.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		16F294CC2C625C8300A8BE97 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,7 +378,7 @@
 		FEEABF182C6002E80089CB35 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				065EDC6A2C60C6E000095316 /* Constants */,
+				06AF06BC2C744A8F006CB1B0 /* Constants */,
 				065EDC6B2C60C6EA00095316 /* Extensions */,
 				065EDC6C2C60C6FB00095316 /* Utils */,
 				065EDC6D2C60C70500095316 /* Data */,
@@ -418,7 +434,6 @@
 		FEEABF3A2C6003D60089CB35 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8D6B9BBB2C737BC5001DF45A /* AppFont.swift */,
 				FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */,
 				FEEABF3B2C6004020089CB35 /* Poppins-Medium.ttf */,
 				FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */,
@@ -519,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */,
+				06AF06BE2C744A9E006CB1B0 /* Regex.swift in Sources */,
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
@@ -528,6 +544,7 @@
 				065EDC862C60CC2E00095316 /* LoginResponse.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
 				066E33A12C67122F003E4387 /* ResetPasswordRequest.swift in Sources */,
+				06AF06D52C7468F0006CB1B0 /* UIButton.swift in Sources */,
 				8D6B9BB42C737B67001DF45A /* OnboardingVC.swift in Sources */,
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
@@ -539,10 +556,13 @@
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
 				8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */,
-				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
+				8D6B9BBC2C737BC5001DF45A /* UIFont.swift in Sources */,
 				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
+				06AF06C02C744B7D006CB1B0 /* UIColor.swift in Sources */,
+				06AF06D72C746BAA006CB1B0 /* UICollectionView.swift in Sources */,
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
 				8D6B9BBA2C737B91001DF45A /* UserDefaultsKeys.swift in Sources */,
+				06AF06D92C746C0C006CB1B0 /* UITableView.swift in Sources */,
 				8D6B9BB52C737B67001DF45A /* OnboardingVM.swift in Sources */,
 				8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */,
 				065EDC722C60C77A00095316 /* NetworkError.swift in Sources */,

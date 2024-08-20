@@ -9,6 +9,8 @@ import UIKit
 
 class ForgotPasswordVC: UIViewController, Storyboarded {
 
+    @IBOutlet weak var lblForgotPassword: UILabel!
+    @IBOutlet weak var lblEnterEmail: UILabel!
     @IBOutlet weak var tfEmailView: UIView!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var lblEmailError: UILabel!
@@ -27,7 +29,11 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
 
     private func setUpViews() {
+        lblForgotPassword.font = .popB24
+        lblEmailError.font = .popR13
+        [tfEmail, btnSubmit].addFont(.popR14)
         [tfEmailView].addBorder()
+        [btnBack, btnSubmit].tintColor(.primary)
         clearError()
     }
     

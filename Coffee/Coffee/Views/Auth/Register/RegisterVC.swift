@@ -9,6 +9,17 @@ import UIKit
 
 class RegisterVC: UIViewController, Storyboarded {
     
+    @IBOutlet weak var lblCreateAccount: UILabel!
+    @IBOutlet weak var lblConnectWithFriend: UILabel!
+    @IBOutlet weak var lblFullName: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblPhoneNumber: UILabel!
+    @IBOutlet weak var lblPassword: UILabel!
+    @IBOutlet weak var lblConfirmPassword: UILabel!
+    @IBOutlet weak var lblOrWith: UILabel!
+    @IBOutlet weak var lblFacebookLogin: UILabel!
+    @IBOutlet weak var lblGoogleLogin: UILabel!
+    
     @IBOutlet weak var tfFullNameView: UIView!
     @IBOutlet weak var tfEmailView: UIView!
     @IBOutlet weak var tfPhoneNumberView: UIView!
@@ -55,7 +66,12 @@ class RegisterVC: UIViewController, Storyboarded {
     }
     
     private func setUpViews() {
+        lblCreateAccount.font = .popB24
+        [lblConnectWithFriend, tfEmail, tfFullName, tfPhoneNumber, tfPassword, tfConfirm, btnLogin, lblOrWith, lblGoogleLogin, lblFacebookLogin, btnLogin].addFont(.popR14)
+        [lblFullNameError, lblEmailError, lblPhoneNumberError, lblPasswordError, lblConfirmError].addFont(.popR13)
+        [lblFullName, lblEmail, lblPhoneNumber, lblPassword, lblConfirmPassword].addFont(.popR17)
         [tfFullNameView, tfEmailView, tfPhoneNumberView, tfPasswordView, tfConfirmView, btnGoogleLoginView].addBorder()
+        [btnBack, btnRegisterBtn].tintColor(.primary)
         clearError()
     }
     

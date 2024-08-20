@@ -9,6 +9,7 @@ import UIKit
 
 class ResetPasswordVC: UIViewController, Storyboarded {
 
+    @IBOutlet weak var lblResetPassword: UILabel!
     @IBOutlet weak var tfPasswordView: UIView!
     @IBOutlet weak var tfConfirmPasswordView: UIView!
     @IBOutlet weak var tfPassword: UITextField!
@@ -39,7 +40,11 @@ class ResetPasswordVC: UIViewController, Storyboarded {
     }
     
     private func setUpViews() {
+        [tfPasswordView, tfConfirmPassword, btnReset].addFont(.popR14)
+        [lblPasswordError, lblConfirmPasswordError].addFont(.popR13)
+        lblResetPassword.font = .popB24
         [tfPasswordView, tfConfirmPasswordView].addBorder()
+        [btnBack, btnReset].tintColor(.primary)
         clearError()
     }
     

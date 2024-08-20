@@ -15,8 +15,8 @@ class OnboardingCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        lblTitle.font = AppFont.poppinsBold.of(size: 24)
-        lblDes.font = AppFont.poppinsRegular.of(size: 16)
+        lblTitle.font = .popB24
+        lblDes.font = .popR16
         iconImage.contentMode = .scaleAspectFit
     }
 
