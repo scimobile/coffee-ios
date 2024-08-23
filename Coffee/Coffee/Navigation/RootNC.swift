@@ -31,12 +31,13 @@ class RootNC: UINavigationController {
     }
     
     private func checkLoginStatus() {
-        if isUserLogin {
-            // Go To Home
-           goToHome()
-        } else {
-            goToLogin()
-        }
+//        if isUserLogin {
+//            // Go To Home
+//           goToHome()
+//        } else {
+//            goToLogin()
+//        }
+        pushViewController(FavoritesVC.instantiate(), animated: true)
     }
     
     func goToHome() {

@@ -42,6 +42,11 @@
 		06AF06D52C7468F0006CB1B0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D42C7468F0006CB1B0 /* UIButton.swift */; };
 		06AF06D72C746BAA006CB1B0 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D62C746BAA006CB1B0 /* UICollectionView.swift */; };
 		06AF06D92C746C0C006CB1B0 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AF06D82C746C0C006CB1B0 /* UITableView.swift */; };
+		169C5BBA2C7782A30062D094 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C5BB92C7782A30062D094 /* FavoritesVC.swift */; };
+		169C5BBC2C7782B20062D094 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C5BBB2C7782B20062D094 /* FavoritesVM.swift */; };
+		169C5BBE2C7782CD0062D094 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169C5BBD2C7782CD0062D094 /* Favorites.storyboard */; };
+		169C5BC22C778C020062D094 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C5BC02C778C020062D094 /* FavoriteCell.swift */; };
+		169C5BC32C778C020062D094 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169C5BC12C778C020062D094 /* FavoriteCell.xib */; };
 		16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294CE2C625CB700A8BE97 /* RegisterVC.swift */; };
 		16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D02C625CCD00A8BE97 /* RegisterVM.swift */; };
 		16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F294D22C62666200A8BE97 /* RegisterRequest.swift */; };
@@ -99,6 +104,11 @@
 		06AF06D42C7468F0006CB1B0 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		06AF06D62C746BAA006CB1B0 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		06AF06D82C746C0C006CB1B0 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		169C5BB92C7782A30062D094 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		169C5BBB2C7782B20062D094 /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
+		169C5BBD2C7782CD0062D094 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		169C5BC02C778C020062D094 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		169C5BC12C778C020062D094 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
 		16F294CE2C625CB700A8BE97 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		16F294D02C625CCD00A8BE97 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		16F294D22C62666200A8BE97 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
@@ -291,6 +301,24 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		169C5BB82C7782740062D094 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				169C5BB92C7782A30062D094 /* FavoritesVC.swift */,
+				169C5BBB2C7782B20062D094 /* FavoritesVM.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		169C5BBF2C778BBB0062D094 /* FavoriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				169C5BC02C778C020062D094 /* FavoriteCell.swift */,
+				169C5BC12C778C020062D094 /* FavoriteCell.xib */,
+			);
+			path = FavoriteCell;
+			sourceTree = "<group>";
+		};
 		16F294CC2C625C8300A8BE97 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +349,7 @@
 		8D6B9BB32C737B67001DF45A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				169C5BBF2C778BBB0062D094 /* FavoriteCell */,
 				8D6B9BB12C737B67001DF45A /* OnboardingCell.swift */,
 				8D6B9BB22C737B67001DF45A /* OnboardingCell.xib */,
 			);
@@ -416,6 +445,7 @@
 				065EDC912C60D24900095316 /* Auth.storyboard */,
 				FEEABF1F2C6002E80089CB35 /* Main.storyboard */,
 				FEEABF242C6002EA0089CB35 /* LaunchScreen.storyboard */,
+				169C5BBD2C7782CD0062D094 /* Favorites.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -423,6 +453,7 @@
 		FEEABF332C6003620089CB35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				169C5BB82C7782740062D094 /* Favorites */,
 				8D6B9BB32C737B67001DF45A /* Cell */,
 				8D6B9BB02C737B67001DF45A /* Onboarding */,
 				065EDC8C2C60D21900095316 /* Auth */,
@@ -518,6 +549,8 @@
 				FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */,
 				FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */,
 				8D6B9BB72C737B67001DF45A /* OnboardingCell.xib in Resources */,
+				169C5BBE2C7782CD0062D094 /* Favorites.storyboard in Resources */,
+				169C5BC32C778C020062D094 /* FavoriteCell.xib in Resources */,
 				FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */,
 				FEEABF3F2C6004020089CB35 /* Poppins-Medium.ttf in Resources */,
 				FEEABF262C6002EA0089CB35 /* Base in Resources */,
@@ -538,6 +571,7 @@
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
+				169C5BBA2C7782A30062D094 /* FavoritesVC.swift in Sources */,
 				066B4EB82C60DE690004B6AF /* UIView.swift in Sources */,
 				16F294D12C625CCD00A8BE97 /* RegisterVM.swift in Sources */,
 				065EDC782C60C7FC00095316 /* CoffeeRequestInterceptor.swift in Sources */,
@@ -548,6 +582,7 @@
 				8D6B9BB42C737B67001DF45A /* OnboardingVC.swift in Sources */,
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
+				169C5BBC2C7782B20062D094 /* FavoritesVM.swift in Sources */,
 				065EDC7D2C60C88400095316 /* KeychainManager.swift in Sources */,
 				063AE4252C650ABF0020531D /* ForgotPasswordVM.swift in Sources */,
 				FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */,
@@ -573,6 +608,7 @@
 				066E33322C650E9B003E4387 /* Array.swift in Sources */,
 				8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */,
 				065EDC762C60C7AA00095316 /* CoffeeEndPoint.swift in Sources */,
+				169C5BC22C778C020062D094 /* FavoriteCell.swift in Sources */,
 				065EDC7F2C60C98C00095316 /* NSNotification.swift in Sources */,
 				066E33A32C671290003E4387 /* ResetPasswordResponse.swift in Sources */,
 				065EDC8E2C60D22600095316 /* LoginVM.swift in Sources */,
