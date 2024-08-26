@@ -27,7 +27,7 @@ enum IconState: String {
     }
 }
 
-class MenuDetailVC: UIViewController {
+class MenuDetailVC: UIViewController  {
 
     @IBOutlet weak var btnFavourite: UIButton!
     @IBOutlet weak var btnBack: UIButton!
@@ -94,6 +94,9 @@ class MenuDetailVC: UIViewController {
     @IBOutlet weak var txtToppingpick: UITextField!
     @IBOutlet weak var btnTopping: UIButton!
     
+    lazy var menuDetailVM:MenuDetailVM = .init(delegate: self)
+    
+    let placeHolder:String = "e.g. less ice"
     
     lazy var pickerView:UIPickerView = {
         let picker = UIPickerView()
@@ -116,7 +119,7 @@ class MenuDetailVC: UIViewController {
         return toolBar
     }
     
-    var count:Int = 0 {
+    var count:Int = 1 {
         didSet{
             lblCount.text = "\(count)"
         }
@@ -124,13 +127,17 @@ class MenuDetailVC: UIViewController {
     
     var currentPickerType:PickerType?
     
-    let milkOptions = ["Almond", "Oat", "Whole", "Skim"]
-    let toppingOptions = ["Chocolate", "Caramel", "Vanilla", "Hazelnut"]
+    var milkOptions:[String]? = []
+    var toppingOptions:[String]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupBindings()
+        
+        milkOptions = menuDetailVM.detail?.milk
+        toppingOptions = menuDetailVM.detail?.topping
+        
     }
     
     private func setupViews(){
@@ -143,14 +150,16 @@ class MenuDetailVC: UIViewController {
         txtView.layer.borderColor = UIColor.gray.cgColor
         txtView.layer.borderWidth = 0.5
         txtView.layer.cornerRadius = 5.0 // Optional: for rounded corners
-        txtView.textColor = UIColor.gray
+        txtView.textColor = UIColor.lightGray
+        txtView.text = placeHolder
+        lblCount.text = String(count)
     }
     
     private func setupBindings(){
         [btnSmall,btnMedium,btnLarge,btnHot,btnCold,btnNone,btn30,btn50].addTarget(selector: #selector(onChangeSelection(_:)))
         
-        txtMilkpick.addTarget(self, action: #selector(onMilkChange), for: .editingChanged)
-        txtToppingpick.addTarget(self, action: #selector(onToppingChange), for: .editingChanged)
+        txtMilkpick.addTarget(self, action: #selector(onMilkChange), for: .editingDidBegin)
+        txtToppingpick.addTarget(self, action: #selector(onToppingChange), for: .editingDidBegin)
         
         btnMinus.addTarget(self, action: #selector(decrementTapped), for: .touchUpInside)
         btnPlus.addTarget(self, action: #selector(incrementTapped), for: .touchUpInside)
@@ -161,14 +170,19 @@ class MenuDetailVC: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        txtMilkpick.delegate = self
+        txtToppingpick.delegate = self
+        
+        txtView.delegate = self
+        
     }
     
     @objc func onMilkChange(){
-        
+        showPicker(for: .MILK, textField: txtMilkpick)
     }
     
     @objc func onToppingChange(){
-        
+        showPicker(for: .TOPPING, textField: txtToppingpick)
     }
     
     func showPicker(for pickerType: PickerType, textField: UITextField) {
@@ -190,8 +204,14 @@ class MenuDetailVC: UIViewController {
     @objc func doneBtnTapped(){
         switch currentPickerType {
         case .MILK:
+            if (txtMilkpick.text == "" || ((txtMilkpick.text?.isEmpty) != nil)){
+                txtMilkpick.text = milkOptions?[0]
+            }
             txtMilkpick.resignFirstResponder()
         case .TOPPING:
+            if (txtToppingpick.text == "" || ((txtToppingpick.text?.isEmpty) != nil)){
+                txtToppingpick.text = toppingOptions?[0]
+            }
             txtToppingpick.resignFirstResponder()
         default:
             print()
@@ -356,9 +376,9 @@ extension MenuDetailVC:UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch currentPickerType {
         case .MILK:
-            txtMilkpick.text = milkOptions[row]
+            txtMilkpick.text = milkOptions?[row]
         case .TOPPING:
-            txtToppingpick.text = toppingOptions[row]
+            txtToppingpick.text = toppingOptions?[row]
         default:
             print()
         }
@@ -374,9 +394,9 @@ extension MenuDetailVC:UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch currentPickerType{
         case .MILK:
-            return self.milkOptions.count
+            return self.milkOptions?.count ?? 1
         case .TOPPING:
-            return self.toppingOptions.count
+            return self.toppingOptions?.count ?? 1
          default:
             return 0
         }
@@ -385,15 +405,41 @@ extension MenuDetailVC:UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch currentPickerType {
         case .MILK:
-            return self.milkOptions[row]
+            return self.milkOptions?[row]
         case .TOPPING:
-            return self.toppingOptions[row]
+            return self.toppingOptions?[row]
         default:
         return ""
         }
     }
     
+}
+
+extension MenuDetailVC:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        false
+    }
+}
+
+extension MenuDetailVC:UITextViewDelegate{
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeHolder{
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+        print(textView.text)
+    }
     
-    
-    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeHolder
+            textView.textColor = UIColor.lightGray
+        }
+    }
+}
+
+extension MenuDetailVC : MenuDetailDelegate{
+    func onGetMenuDetail() {
+        initialState()
+    }
 }

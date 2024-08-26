@@ -49,13 +49,10 @@
 		8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */; };
 		8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC32C737F9C001DF45A /* RootNC.swift */; };
 		8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC72C738663001DF45A /* AuthWrappers.swift */; };
-		8D6B9BCA2C738D51001DF45A /* MenuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */; };
-		8D6B9BCE2C738D71001DF45A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BCB2C738D71001DF45A /* Array.swift */; };
 		8D6B9BCF2C738D71001DF45A /* MenuDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */; };
 		FEEABF1A2C6002E80089CB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF192C6002E80089CB35 /* AppDelegate.swift */; };
 		FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1B2C6002E80089CB35 /* SceneDelegate.swift */; };
 		FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEABF1D2C6002E80089CB35 /* ViewController.swift */; };
-		FEEABF212C6002E80089CB35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF202C6002E80089CB35 /* Base */; };
 		FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF222C6002EA0089CB35 /* Assets.xcassets */; };
 		FEEABF262C6002EA0089CB35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF252C6002EA0089CB35 /* Base */; };
 		FEEABF2F2C60031F0089CB35 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FEEABF2E2C60031F0089CB35 /* IQKeyboardManagerSwift */; };
@@ -63,9 +60,10 @@
 		FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */; };
 		FEEABF412C6004020089CB35 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */; };
 		FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */; };
-		FF186D7B2C68F8F600A09D94 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF186D7A2C68F8F600A09D94 /* Array.swift */; };
+		FF72310C2C7CCB1500591CC1 /* MenuDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF72310B2C7CCB1500591CC1 /* MenuDetailVM.swift */; };
+		FF7231112C7CEBA700591CC1 /* MenuDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7231102C7CEBA700591CC1 /* MenuDetail.swift */; };
+		FF8876FB2C74F44E00DCDE27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEABF1F2C6002E80089CB35 /* Main.storyboard */; };
 		FFBC34542C6897B2008049E5 /* MenuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBC34532C6897B2008049E5 /* MenuDetail.storyboard */; };
-		FFBC34572C6897CF008049E5 /* MenuDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC34562C6897CF008049E5 /* MenuDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,8 +105,6 @@
 		8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		8D6B9BC32C737F9C001DF45A /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 		8D6B9BC72C738663001DF45A /* AuthWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWrappers.swift; sourceTree = "<group>"; };
-		8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuDetail.storyboard; sourceTree = "<group>"; };
-		8D6B9BCB2C738D71001DF45A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailVC.swift; sourceTree = "<group>"; };
 		FEEABF162C6002E80089CB35 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEABF192C6002E80089CB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +118,9 @@
 		FEEABF3C2C6004020089CB35 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		FEEABF3D2C6004020089CB35 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		FEEABF3E2C6004020089CB35 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		FF186D7A2C68F8F600A09D94 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Coffee/Views/MenuDetail/Array.swift; sourceTree = SOURCE_ROOT; };
+		FF72310B2C7CCB1500591CC1 /* MenuDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailVM.swift; sourceTree = "<group>"; };
+		FF7231102C7CEBA700591CC1 /* MenuDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetail.swift; sourceTree = "<group>"; };
 		FFBC34532C6897B2008049E5 /* MenuDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuDetail.storyboard; sourceTree = "<group>"; };
-		FFBC34562C6897CF008049E5 /* MenuDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +227,7 @@
 		065EDC822C60CC0A00095316 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF72310F2C7CEB8C00591CC1 /* MenuDetail */,
 				8D6B9BBE2C737C88001DF45A /* Onboarding */,
 				065EDC842C60CC2300095316 /* Response */,
 				065EDC832C60CC1900095316 /* Request */,
@@ -358,8 +355,8 @@
 		8D6B9BCD2C738D71001DF45A /* MenuDetail */ = {
 			isa = PBXGroup;
 			children = (
-				8D6B9BCB2C738D71001DF45A /* Array.swift */,
 				8D6B9BCC2C738D71001DF45A /* MenuDetailVC.swift */,
+				FF72310B2C7CCB1500591CC1 /* MenuDetailVM.swift */,
 			);
 			path = MenuDetail;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 		FEEABF322C6003500089CB35 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				8D6B9BC92C738D51001DF45A /* MenuDetail.storyboard */,
 				065EDC912C60D24900095316 /* Auth.storyboard */,
 				FEEABF1F2C6002E80089CB35 /* Main.storyboard */,
 				FEEABF242C6002EA0089CB35 /* LaunchScreen.storyboard */,
@@ -451,10 +447,10 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		FFBC34552C6897BD008049E5 /* MenuDetail */ = {
+		FF72310F2C7CEB8C00591CC1 /* MenuDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FFBC34562C6897CF008049E5 /* MenuDetailVC.swift */,
+				FF7231102C7CEBA700591CC1 /* MenuDetail.swift */,
 			);
 			path = MenuDetail;
 			sourceTree = "<group>";
@@ -531,7 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D6B9BCA2C738D51001DF45A /* MenuDetail.storyboard in Resources */,
+				FF8876FB2C74F44E00DCDE27 /* Main.storyboard in Resources */,
 				065EDC922C60D24900095316 /* Auth.storyboard in Resources */,
 				FEEABF232C6002EA0089CB35 /* Assets.xcassets in Resources */,
 				FEEABF422C6004020089CB35 /* Poppins-SemiBold.ttf in Resources */,
@@ -540,7 +536,6 @@
 				FEEABF3F2C6004020089CB35 /* Poppins-Medium.ttf in Resources */,
 				FFBC34542C6897B2008049E5 /* MenuDetail.storyboard in Resources */,
 				FEEABF262C6002EA0089CB35 /* Base in Resources */,
-				FEEABF212C6002E80089CB35 /* Base in Resources */,
 				FEEABF402C6004020089CB35 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,8 +568,8 @@
 				FEEABF1C2C6002E80089CB35 /* SceneDelegate.swift in Sources */,
 				16F294D32C62666200A8BE97 /* RegisterRequest.swift in Sources */,
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
+				FF7231112C7CEBA700591CC1 /* MenuDetail.swift in Sources */,
 				8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */,
-				8D6B9BCE2C738D71001DF45A /* Array.swift in Sources */,
 				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
 				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
@@ -583,6 +578,7 @@
 				8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */,
 				065EDC722C60C77A00095316 /* NetworkError.swift in Sources */,
 				065EDC902C60D23400095316 /* LoginVC.swift in Sources */,
+				FF72310C2C7CCB1500591CC1 /* MenuDetailVM.swift in Sources */,
 				069EEA452C6114CE00DB10DE /* String.swift in Sources */,
 				065EDC812C60CAA000095316 /* AuthRemoteDataSource.swift in Sources */,
 				065EDC8B2C60D0B200095316 /* AuthRepository.swift in Sources */,
@@ -759,6 +755,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sci.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,6 +787,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sci.coffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

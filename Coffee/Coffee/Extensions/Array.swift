@@ -16,3 +16,11 @@ extension Array where Element == UIView {
         }
     }
 }
+
+extension Array where Element == UIButton{
+    func addTarget(selector:Selector){
+        self.forEach { button in
+            button.addTarget(self, action: selector, for: .touchUpInside)
+        }
+    }
+}
