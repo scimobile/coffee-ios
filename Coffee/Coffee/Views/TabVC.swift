@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TabVC: UITabBarController {
+class TabVC: UITabBarController, Storyboarded {
+    
+    static var storyboardName: String = "Home"
     
     class CustomTabBar: UITabBar {
         private let customHeight: CGFloat = 100
