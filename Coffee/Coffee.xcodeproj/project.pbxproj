@@ -733,13 +733,8 @@
 			files = (
 				8DE481A62C73916F0033C370 /* CarouselItemCell.swift in Sources */,
 				8D6B9BB62C737B67001DF45A /* OnboardingCell.swift in Sources */,
-<<<<<<< HEAD
 				06AF06BE2C744A9E006CB1B0 /* Regex.swift in Sources */,
 				8DE481A82C73916F0033C370 /* BannerItemCell.swift in Sources */,
-=======
-				8DE481A82C73916F0033C370 /* BannerItemCell.swift in Sources */,
-				8DE481782C73910B0033C370 /* AppColor.swift in Sources */,
->>>>>>> e9d15ff604f88407ece511c1dc8f96ca17d75231
 				065EDC742C60C78E00095316 /* EndPoint.swift in Sources */,
 				066E33352C651726003E4387 /* ResetPasswordVC.swift in Sources */,
 				065EDC882C60CCF500095316 /* LoginRequest.swift in Sources */,
@@ -750,17 +745,9 @@
 				8DE4818A2C7391620033C370 /* HomeVC.swift in Sources */,
 				065EDC702C60C71700095316 /* NetworkManager.swift in Sources */,
 				066E33A12C67122F003E4387 /* ResetPasswordRequest.swift in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
 				06AF06D52C7468F0006CB1B0 /* UIButton.swift in Sources */,
-=======
 				8DE4818D2C7391620033C370 /* OrderVC.swift in Sources */,
 				8DE4818B2C7391620033C370 /* SearchResultsVC.swift in Sources */,
->>>>>>> e9d15ff (Adjusted with NavigationFlow)
-=======
-				8DE4818D2C7391620033C370 /* OrderVC.swift in Sources */,
-				8DE4818B2C7391620033C370 /* SearchResultsVC.swift in Sources */,
->>>>>>> e9d15ff604f88407ece511c1dc8f96ca17d75231
 				8D6B9BB42C737B67001DF45A /* OnboardingVC.swift in Sources */,
 				061E335E2C63BFB700F2390C /* Storyboarded.swift in Sources */,
 				FEEABF1E2C6002E80089CB35 /* ViewController.swift in Sources */,
@@ -777,32 +764,16 @@
 				066E33372C6518F1003E4387 /* ResetPasswordVM.swift in Sources */,
 				8DE481BD2C7392A00033C370 /* CollectionViewCell.swift in Sources */,
 				8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
 				8D6B9BBC2C737BC5001DF45A /* UIFont.swift in Sources */,
 				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				06AF06C02C744B7D006CB1B0 /* UIColor.swift in Sources */,
 				06AF06D72C746BAA006CB1B0 /* UICollectionView.swift in Sources */,
-=======
 				8DE481BC2C7392A00033C370 /* CollectionView.swift in Sources */,
-				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
 				8DE481BF2C7392A00033C370 /* TableView.swift in Sources */,
 				8DE481A22C73916F0033C370 /* CarouselCell.swift in Sources */,
 				8DE481A42C73916F0033C370 /* BannerCell.swift in Sources */,
 				8DE481872C7391620033C370 /* ProfileVC.swift in Sources */,
-				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
 				8DE481BB2C7392A00033C370 /* UIView.swift in Sources */,
->>>>>>> e9d15ff (Adjusted with NavigationFlow)
-=======
-				8DE481BC2C7392A00033C370 /* CollectionView.swift in Sources */,
-				8D6B9BBC2C737BC5001DF45A /* AppFont.swift in Sources */,
-				8DE481BF2C7392A00033C370 /* TableView.swift in Sources */,
-				8DE481A22C73916F0033C370 /* CarouselCell.swift in Sources */,
-				8DE481A42C73916F0033C370 /* BannerCell.swift in Sources */,
-				8DE481872C7391620033C370 /* ProfileVC.swift in Sources */,
-				063AE4272C650ACA0020531D /* ForgotPasswordVC.swift in Sources */,
-				8DE481BB2C7392A00033C370 /* UIView.swift in Sources */,
->>>>>>> e9d15ff604f88407ece511c1dc8f96ca17d75231
 				16F294CF2C625CB700A8BE97 /* RegisterVC.swift in Sources */,
 				8D6B9BBA2C737B91001DF45A /* UserDefaultsKeys.swift in Sources */,
 				06AF06D92C746C0C006CB1B0 /* UITableView.swift in Sources */,
