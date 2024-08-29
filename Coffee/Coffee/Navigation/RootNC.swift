@@ -16,7 +16,9 @@ class RootNC: UINavigationController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
             //Strong Reference => Weak Ref
             //Memory Leak
-            self?.checkOnboardingState()
+//            self?.checkOnboardingState()
+//            self?.pushViewController(OrdersHistoryVC.instantiate(), animated: true)
+            self?.pushViewController(FavoritesVC.instantiate(), animated: true)
         }
     }
     
@@ -31,13 +33,12 @@ class RootNC: UINavigationController {
     }
     
     private func checkLoginStatus() {
-//        if isUserLogin {
-//            // Go To Home
-//           goToHome()
-//        } else {
-//            goToLogin()
-//        }
-        pushViewController(FavoritesVC.instantiate(), animated: true)
+        if isUserLogin {
+            // Go To Home
+           goToHome()
+        } else {
+            goToLogin()
+        }
     }
     
     func goToHome() {

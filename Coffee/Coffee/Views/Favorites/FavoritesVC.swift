@@ -20,10 +20,6 @@ class FavoritesVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         setupViews()
         setupBindings()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         vm.fetchFavoriteMenus()
     }
     
@@ -75,7 +71,9 @@ extension FavoritesVC: UICollectionViewDelegateFlowLayout {
 }
 
 extension FavoritesVC: FavoritesViewDelegate {
-    func onGetFavoriteMenus() {
-        cvFavorites.reloadData()
+    func onLoadFavoriteMenus() {
+        DispatchQueue.main.async { [weak self] in
+            self?.cvFavorites.reloadData()
+        }
     }
 }

@@ -24,6 +24,7 @@ extension UIFont {
     static var popR12: UIFont { FontFamily.regular.of(size: 12) }
     static var popR13: UIFont { FontFamily.regular.of(size: 13) }
     static var popR14: UIFont { FontFamily.regular.of(size: 14) }
+    static var popR15: UIFont { FontFamily.regular.of(size: 15) }
     static var popR16: UIFont { FontFamily.regular.of(size: 16) }
     static var popR17: UIFont { FontFamily.regular.of(size: 17) }
         

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FavoritesViewDelegate {
-    func onGetFavoriteMenus()
+    func onLoadFavoriteMenus()
 }
 
 class FavoritesVM {
