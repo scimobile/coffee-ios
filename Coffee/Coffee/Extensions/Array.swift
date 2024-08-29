@@ -15,4 +15,13 @@ extension Array where Element == UIView {
             item.layer.borderColor = color.cgColor
         }
     }
+    
+}
+
+extension Array where Element == UIButton{
+    func addTarget(selector:Selector){
+        self.forEach { button in
+            button.addTarget(self, action: selector, for: .touchUpInside)
+        }
+    }
 }
