@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol DeliveryAddressViewDelegate {
+protocol DeliveryAddressVMDelegate {
     func onLoadAddress()
 }
 
 class DeliveryAddressVM {
-    private let delegate: DeliveryAddressViewDelegate
+    private let delegate: DeliveryAddressVMDelegate
     
-    init(delegate: DeliveryAddressViewDelegate) {
+    init(delegate: DeliveryAddressVMDelegate) {
         self.delegate = delegate
     }
     

@@ -41,6 +41,6 @@ class OrderConfirmVC: UIViewController, Storyboarded {
 
 }
 
-extension OrderConfirmVC: OrderConfirmViewDelegate {
+extension OrderConfirmVC: OrderConfirmVMDelegate {
     
 }

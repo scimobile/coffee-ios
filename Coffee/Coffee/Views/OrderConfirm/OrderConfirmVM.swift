@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol OrderConfirmViewDelegate {
+protocol OrderConfirmVMDelegate {
     
 }
 
 class OrderConfirmVM {
-    private let delegate: OrderConfirmViewDelegate
+    private let delegate: OrderConfirmVMDelegate
     
-    init(delegate: OrderConfirmViewDelegate) {
+    init(delegate: OrderConfirmVMDelegate) {
         self.delegate = delegate
     }
     

@@ -60,7 +60,7 @@ extension PickupAddressVC: UITableViewDelegate {
     
 }
 
-extension PickupAddressVC: PickupAddressViewDelegate {
+extension PickupAddressVC: PickupAddressVMDelegate {
     func onLoadBranches() {
         //MARK: ToDo
         self.tblBranches.reloadData()

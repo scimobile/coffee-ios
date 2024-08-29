@@ -74,7 +74,7 @@ extension PaymentVC: UITableViewDelegate {
     
 }
 
-extension PaymentVC: PaymentViewDelegate {
+extension PaymentVC: PaymentVMDelegate {
     func onLoadPayments() {
         self.updateTableViewHeight()
         self.tblPayments.selectRow(

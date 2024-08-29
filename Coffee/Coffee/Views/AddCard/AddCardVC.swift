@@ -156,7 +156,7 @@ extension AddCardVC: UITextFieldDelegate {
     }
 }
 
-extension AddCardVC: AddCardViewDelegate {
+extension AddCardVC: AddCardVMDelegate {
     func onValidate(validationErrors: [AddCardVM.FormInput]) {
         if validationErrors.count > 0 {
             btnSave.isEnabled = false

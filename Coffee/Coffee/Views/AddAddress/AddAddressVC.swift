@@ -175,7 +175,7 @@ class AddAddressVC: UIViewController, Storyboarded {
     }
 }
 
-extension AddAddressVC: AddAddressViewDelegate {
+extension AddAddressVC: AddAddressVMDelegate {
     func onValidate(validationErrors: [AddAddressVM.FormInput]) {
         if validationErrors.count > 0 {
             btnSave.isEnabled = false

@@ -154,7 +154,7 @@ extension CartVC: UITableViewDelegate {
     
 }
 
-extension CartVC: CartViewDelegate {
+extension CartVC: CartVMDelegate {
     func onChangeDeliveryPickup() {
         UIView.animate(withDuration: 0.2) { [weak self] in
             guard let self = self else { return }

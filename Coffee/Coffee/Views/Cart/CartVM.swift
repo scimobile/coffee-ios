@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol CartViewDelegate {
+protocol CartVMDelegate {
     func onChangeDeliveryPickup()
     func onLoadCart()
 }
 
 class CartVM {
-    private let delegate: CartViewDelegate
+    private let delegate: CartVMDelegate
     
     private(set) var isDelivery: Bool = true {
         didSet {
@@ -27,7 +27,7 @@ class CartVM {
         }
     }
     
-    init(delegate: CartViewDelegate) {
+    init(delegate: CartVMDelegate) {
         self.delegate = delegate
     }
     

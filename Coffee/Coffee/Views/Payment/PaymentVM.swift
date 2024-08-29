@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol PaymentViewDelegate {
+protocol PaymentVMDelegate {
     func onLoadPayments()
 }
 
 class PaymentVM {
-    private let delegate: PaymentViewDelegate
+    private let delegate: PaymentVMDelegate
     
-    init(delegate: PaymentViewDelegate) {
+    init(delegate: PaymentVMDelegate) {
         self.delegate = delegate
     }
     

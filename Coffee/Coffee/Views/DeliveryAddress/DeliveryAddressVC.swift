@@ -66,7 +66,7 @@ extension DeliveryAddressVC: UITableViewDelegate {
     
 }
 
-extension DeliveryAddressVC: DeliveryAddressViewDelegate {
+extension DeliveryAddressVC: DeliveryAddressVMDelegate {
     func onLoadAddress() {
         self.tblDeliveryAddress.reloadData()
     }
