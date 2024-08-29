@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AddCardViewDelegate {
+protocol AddCardVMDelegate {
     func onValidate(validationErrors: [AddCardVM.FormInput])
 }
 
@@ -19,9 +19,9 @@ class AddCardVM {
         case CVVTextField(String)
     }
     
-    private let delegate: AddCardViewDelegate
+    private let delegate: AddCardVMDelegate
     
-    init(delegate: AddCardViewDelegate) {
+    init(delegate: AddCardVMDelegate) {
         self.delegate = delegate
     }
     

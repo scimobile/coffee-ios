@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol PickupAddressViewDelegate {
+protocol PickupAddressVMDelegate {
     func onLoadBranches()
 }
 
 class PickupAddressVM {
-    private let delegate: PickupAddressViewDelegate
+    private let delegate: PickupAddressVMDelegate
     
-    init(delegate: PickupAddressViewDelegate) {
+    init(delegate: PickupAddressVMDelegate) {
         self.delegate = delegate
     }
     

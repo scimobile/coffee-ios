@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AddAddressViewDelegate {
+protocol AddAddressVMDelegate {
     func onValidate(validationErrors: [AddAddressVM.FormInput])
 }
 
@@ -19,9 +19,9 @@ class AddAddressVM {
         case HouseNoTextField(String)
     }
     
-    private let delegate: AddAddressViewDelegate
+    private let delegate: AddAddressVMDelegate
     
-    init(delegate: AddAddressViewDelegate) {
+    init(delegate: AddAddressVMDelegate) {
         self.delegate = delegate
     }
     
