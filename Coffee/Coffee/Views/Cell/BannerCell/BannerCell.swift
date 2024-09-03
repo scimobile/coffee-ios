@@ -49,9 +49,7 @@ extension BannerCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerItemCell", for: indexPath) as? BannerItemCell else { return UICollectionViewCell() }
         cell.imageUrl = ""
         return cell
-    }
-    
-    
+    }   
 }
 
 extension BannerCell: UICollectionViewDelegate {

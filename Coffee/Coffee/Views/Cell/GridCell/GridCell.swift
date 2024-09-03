@@ -31,8 +31,6 @@ class GridCell: UITableViewCell {
             self.cvGrid.reloadData()
         }
         
-//        cvGrid.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        
         selectionStyle = .none
         
         lblGridTitle.text = "Category"
@@ -60,9 +58,7 @@ extension GridCell: UICollectionViewDelegate {
 }
 
 extension GridCell: UICollectionViewDataSource {
-    
-    
-    
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cvChip {
             return chips.count
@@ -106,9 +102,7 @@ extension GridCell: UICollectionViewDataSource {
 
 extension GridCell: UICollectionViewDelegateFlowLayout {
     
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == cvChip {
             let indexPath = IndexPath(item: indexPath.item, section: 0)
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChipItemCell", for: indexPath) as? ChipItemCell else {

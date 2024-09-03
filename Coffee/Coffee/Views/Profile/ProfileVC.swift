@@ -20,8 +20,14 @@ class ProfileVC: UIViewController, Storyboarded {
         tabBarItem = UITabBarItem(title: "Profile", image: .init(systemName: "person"), selectedImage: .init(systemName: "person.fill"))
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+    }
+    
+    @objc private func onTapBackButton() {
+        navigationController?.popViewController(animated: true)
     }
 
 

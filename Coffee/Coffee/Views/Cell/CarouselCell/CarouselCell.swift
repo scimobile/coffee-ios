@@ -25,10 +25,6 @@ class CarouselCell: UITableViewCell {
         cvCarousel.delegate = self
         cvCarousel.dataSource = self
         
-//        let layout = SnappingFlowLayout()
-//        layout.scrollDirection = .horizontal
-//        cvCarousel.collectionViewLayout = layout
-        
         cvCarousel.decelerationRate = .fast
         selectionStyle = .none
         
@@ -48,9 +44,7 @@ extension CarouselCell: CarouselItemCellDelegate {
         if let indexPath = cvCarousel.indexPath(for: cell) {
             delegate?.carouselCell(self, didTapAddProductAt: indexPath)
         }
-    }
-    
-    
+    } 
 }
 
 extension CarouselCell: UICollectionViewDataSource {

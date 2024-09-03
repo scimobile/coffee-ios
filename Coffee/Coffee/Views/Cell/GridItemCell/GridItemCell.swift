@@ -37,8 +37,6 @@ class GridItemCell: UICollectionViewCell {
                         print("Job failed: \(error.localizedDescription)")
                     }
                 }
-                
-                
             }
         }
     }

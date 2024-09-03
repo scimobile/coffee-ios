@@ -14,7 +14,7 @@ class TabVC: UITabBarController, Storyboarded {
     class CustomHeightTabbar:UITabBar{
         override func sizeThatFits(_ size: CGSize) -> CGSize {
             var size = super.sizeThatFits(size)
-            size.height = 100
+            size.height = 90
             return size
         }
     }
@@ -39,18 +39,36 @@ class TabVC: UITabBarController, Storyboarded {
         return vc
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        viewControllers = [
-            homeVC,
-            favoriteVC,
-            profileVC,
-            orderVC
-        ]
+    init() {
+        super.init(nibName: nil, bundle: nil)
         
         object_setClass(self.tabBar, CustomHeightTabbar.self)
-        self.setupTabBarAppearance()
+        
+        setupNC()
+        setupTabBarAppearance()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    private func setupNC() {
+        let homeNavController = UINavigationController(rootViewController: homeVC)
+        let favoriteNavController = UINavigationController(rootViewController: favoriteVC)
+        let orderNavController = UINavigationController(rootViewController: orderVC)
+        let profileNavController = UINavigationController(rootViewController: profileVC)
+        
+        viewControllers = [
+            homeNavController,
+            favoriteNavController,
+            orderNavController,
+            profileNavController
+        ]
     }
     
     private func setupTabBarAppearance() {
@@ -60,10 +78,18 @@ class TabVC: UITabBarController, Storyboarded {
         tabBar.backgroundColor = .eggWhite
         
         tabBar.layer.shadowColor = UIColor.secondary.cgColor
-        tabBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabBar.layer.shadowOpacity = 0.3
         tabBar.layer.shadowRadius = 4
         tabBar.layer.masksToBounds = false
+        
+        let normalAttribute = [NSAttributedString.Key.foregroundColor: UIColor.coffeeGray]
+        let selectedAttribute = [NSAttributedString.Key.foregroundColor: UIColor.secondary]
+        
+        tabBar.items?.forEach {
+            $0.setTitleTextAttributes(normalAttribute, for: .normal)
+            $0.setTitleTextAttributes(selectedAttribute, for: .selected)
+        }
         
         if let items = tabBar.items {
             for item in items {

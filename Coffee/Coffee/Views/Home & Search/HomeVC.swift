@@ -8,8 +8,8 @@
 import UIKit
 
 class HomeVC: UIViewController, Storyboarded {
-    static var storyboardName: String  = "Home"
     
+    static var storyboardName: String  = "Home"
     
     @IBOutlet weak var tvHome: UITableView!
     private var floatingCartButton: UIButton!
@@ -36,6 +36,7 @@ class HomeVC: UIViewController, Storyboarded {
         setupSearchController()
         setupView()
         setupFloatingCartButton()
+
     }
     
     func setupSearchController() {
@@ -43,6 +44,10 @@ class HomeVC: UIViewController, Storyboarded {
         searchController.delegate = self
         navigationItem.searchController = searchController
         
+        let cancelButtonAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.secondary
+        ]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(cancelButtonAttributes, for: .normal)
     }
     
     func setupView() {
@@ -98,11 +103,13 @@ class HomeVC: UIViewController, Storyboarded {
         
         let profileBarItem = UIBarButtonItem(customView: profileButton)
         navigationItem.rightBarButtonItem = profileBarItem
+        
     }
     
     @objc private func profileButtonTapped() {
-        let sb = UIStoryboard(name: "Home", bundle: .main)
-        guard let vc = sb.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC else { return }
+        let vc = ProfileVC.instantiate()
+        self.navigationItem.backButtonTitle = ""
+        self.navigationController?.navigationBar.tintColor = .secondary
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -123,7 +130,7 @@ class HomeVC: UIViewController, Storyboarded {
         floatingCartButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             floatingCartButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            floatingCartButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            floatingCartButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110),
             floatingCartButton.widthAnchor.constraint(equalToConstant: 50),
             floatingCartButton.heightAnchor.constraint(equalToConstant: 50)
         ])

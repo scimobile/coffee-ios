@@ -43,7 +43,7 @@ class RootNC: UINavigationController {
     func goToHome() {
         // TBD
         let tabVC = TabVC.init()
-        pushViewController(tabVC, animated: true)
+        setViewControllers([tabVC], animated: true)
     }
     
     func goToLogin() {
@@ -52,7 +52,6 @@ class RootNC: UINavigationController {
     }
     
 }
-
 
 extension UIViewController {
     var rootNC:RootNC? {
