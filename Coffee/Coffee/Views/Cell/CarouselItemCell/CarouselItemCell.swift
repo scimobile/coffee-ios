@@ -54,20 +54,20 @@ class CarouselItemCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        vCell.backgroundColor = AppColor.lightGray.color
+        vCell.backgroundColor = .coffeeGray
         vCell.layer.cornerRadius = 20
         
         lblProductName.text = "Dummy Product Name"
-        lblProductName.font = AppFont.poppinsMedium.of(size: 14)
-        lblProductName.textColor = AppColor.secondary.color
+        lblProductName.font = .popM14
+        lblProductName.textColor = .secondary
         
         lblProductPrice.text = "$300.24"
-        lblProductPrice.font = AppFont.poppinsMedium.of(size: 14)
-        lblProductPrice.textColor = AppColor.secondary.color
+        lblProductPrice.font = .popM14
+        lblProductPrice.textColor = .secondary
         
         let btnImg = UIImage.init(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 14, weight: .bold) )
         btnAddProduct.setImage(btnImg, for: .normal)
-        btnAddProduct.tintColor = AppColor.secondary.color
+        btnAddProduct.tintColor = .secondary
         btnAddProduct.addTarget(self, action: #selector(addProductTapped), for: .touchUpInside)
     }
     

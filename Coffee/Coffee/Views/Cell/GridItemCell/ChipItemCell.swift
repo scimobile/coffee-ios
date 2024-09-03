@@ -14,14 +14,14 @@ class ChipItemCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            chipView.backgroundColor = isSelected ? AppColor.primary.color : AppColor.lightGray.color
-            lblChip.textColor = isSelected ? AppColor.eggWhite.color : AppColor.darkBlue.color
+            chipView.backgroundColor = isSelected ? .primary : .coffeeGray
+            lblChip.textColor = isSelected ? .eggWhite : .darkBlue
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        chipView.backgroundColor = AppColor.lightGray.color
+        chipView.backgroundColor = .coffeeGray
         chipView.layer.cornerRadius = 10
         
     }

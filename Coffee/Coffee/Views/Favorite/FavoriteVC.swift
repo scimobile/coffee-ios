@@ -7,7 +7,18 @@
 
 import UIKit
 
-class FavoriteVC: UIViewController {
+class FavoriteVC: UIViewController, Storyboarded {
+    static var storyboardName: String = "Home"
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder:NSCoder) {
+        super.init(coder: coder)
+        
+        tabBarItem = UITabBarItem(title: "Favorite", image: .init(systemName: "star"), selectedImage: .init(systemName: "star.fill"))
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

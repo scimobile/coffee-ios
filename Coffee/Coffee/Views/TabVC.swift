@@ -11,61 +11,55 @@ class TabVC: UITabBarController, Storyboarded {
     
     static var storyboardName: String = "Home"
     
-    class CustomTabBar: UITabBar {
-        private let customHeight: CGFloat = 100
-        
+    class CustomHeightTabbar:UITabBar{
         override func sizeThatFits(_ size: CGSize) -> CGSize {
-            var sizeThatFits = super.sizeThatFits(size)
-            sizeThatFits.height = customHeight
-            return sizeThatFits
+            var size = super.sizeThatFits(size)
+            size.height = 100
+            return size
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupCustomTabBar()
-        self.setupTabs()
-        self.setupTabBarAppearance()
+    
+    var homeVC:HomeVC {
+        let vc = HomeVC.instantiate()
+        return vc
     }
     
-    private func setupCustomTabBar() {
-        let customTabBar = CustomTabBar()
-        setValue(customTabBar, forKey: "tabBar")
+    var favoriteVC:FavoriteVC {
+        let vc = FavoriteVC.instantiate()
+        return vc
     }
-
-    private func setupTabs() {
-        guard let viewControllers = self.viewControllers else { return }
+    
+    var profileVC:ProfileVC {
+        let vc = ProfileVC.instantiate()
+        return vc
+    }
+    
+    var orderVC:OrderVC {
+        let vc = OrderVC.instantiate()
+        return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let homeVC = viewControllers[0]
-        let favoriteVC = viewControllers[1]
-        let orderVC = viewControllers[2]
-        let profileVC = viewControllers[3]
+        viewControllers = [
+            homeVC,
+            favoriteVC,
+            profileVC,
+            orderVC
+        ]
         
-        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        favoriteVC.tabBarItem = UITabBarItem(title: "Favorite", image: UIImage(systemName: "star"), tag: 1)
-        orderVC.tabBarItem = UITabBarItem(title: "Order", image: UIImage(systemName: "list.bullet.clipboard"), tag: 2)
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 3)
-        
-        homeVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.secondary.color], for: .selected)
-        homeVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.lightGray.color], for: .normal)
-        
-        favoriteVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.secondary.color], for: .selected)
-        favoriteVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.lightGray.color], for: .normal)
-        
-        orderVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.secondary.color], for: .selected)
-        orderVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.lightGray.color], for: .normal)
-        
-        profileVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.secondary.color], for: .selected)
-        profileVC.tabBarItem.setTitleTextAttributes([.foregroundColor: AppColor.lightGray.color], for: .normal)
+        object_setClass(self.tabBar, CustomHeightTabbar.self)
+        self.setupTabBarAppearance()
     }
     
     private func setupTabBarAppearance() {
         
-        tabBar.tintColor = AppColor.eggWhite.color
-        tabBar.unselectedItemTintColor = AppColor.lightGray.color
-        tabBar.backgroundColor = AppColor.eggWhite.color
+        tabBar.tintColor = .eggWhite
+        tabBar.unselectedItemTintColor = .coffeeGray
+        tabBar.backgroundColor = .eggWhite
         
-        tabBar.layer.shadowColor = AppColor.secondary.color.cgColor
+        tabBar.layer.shadowColor = UIColor.secondary.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 2)
         tabBar.layer.shadowOpacity = 0.3
         tabBar.layer.shadowRadius = 4
@@ -74,7 +68,7 @@ class TabVC: UITabBarController, Storyboarded {
         if let items = tabBar.items {
             for item in items {
                 if let image = item.image {
-                    item.selectedImage = image.withTintColor(AppColor.secondary.color, renderingMode: .alwaysOriginal)
+                    item.selectedImage = image.withTintColor(.secondary, renderingMode: .alwaysOriginal)
                 }
             }
         }

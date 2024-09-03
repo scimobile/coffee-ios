@@ -36,8 +36,8 @@ class GridCell: UITableViewCell {
         selectionStyle = .none
         
         lblGridTitle.text = "Category"
-        lblGridTitle.font = AppFont.poppinsSemibold.of(size: 34)
-        lblGridTitle.textColor = AppColor.secondary.color
+        lblGridTitle.font = .popSemiB34
+        lblGridTitle.textColor = .secondary
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

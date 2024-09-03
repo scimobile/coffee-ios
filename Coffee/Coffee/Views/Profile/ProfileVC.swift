@@ -7,8 +7,19 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
-
+class ProfileVC: UIViewController, Storyboarded {
+    static var storyboardName: String = "Home"
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder:NSCoder) {
+        super.init(coder: coder)
+        
+        tabBarItem = UITabBarItem(title: "Profile", image: .init(systemName: "person"), selectedImage: .init(systemName: "person.fill"))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

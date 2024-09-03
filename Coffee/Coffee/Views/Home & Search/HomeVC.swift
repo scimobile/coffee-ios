@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, Storyboarded {
+    static var storyboardName: String  = "Home"
+    
     
     @IBOutlet weak var tvHome: UITableView!
     private var floatingCartButton: UIButton!
@@ -16,33 +18,15 @@ class HomeVC: UIViewController {
     
     let searchController = UISearchController(searchResultsController: SearchResultsVC())
     
-//    let floatingButton: UIButton = {
-//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-////        button.layer.masksToBounds = true
-//        button.layer.cornerRadius = 8
-//        button.layer.shadowRadius = 10
-//        button.layer.shadowOpacity = 0.3
-//        button.layer.shadowColor = AppColor.secondary.color.cgColor
-//        button.backgroundColor = AppColor.primary.color
-//        
-//        let image = UIImage(systemName: "cart", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24, weight: .medium))
-//        button.setImage(image, for: .normal)
-//        button.tintColor = AppColor.eggWhite.color
-//        
-//        return button
-//    }()
-//    
-//    let badgeLabel: UILabel = {
-//        let label = UILabel()
-//        label.backgroundColor = AppColor.coffeeRed.color
-//        label.textColor = .white
-//        label.font = AppFont.poppinsBold.of(size: 12)
-//        label.textAlignment = .center
-//        label.layer.cornerRadius = 10
-//        label.clipsToBounds = true
-//        label.text = "3"
-//        return label
-//    }()
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder:NSCoder) {
+        super.init(coder: coder)
+        
+        tabBarItem = UITabBarItem(title: "Home", image: .init(systemName: "house"), selectedImage: .init(systemName: "house.fill"))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,34 +34,9 @@ class HomeVC: UIViewController {
         setupCustomTitle()
         setupProfilePicture()
         setupSearchController()
-        
-        
         setupView()
-//        view.addSubview(floatingButton)
-//        floatingButton.addSubview(badgeLabel)
         setupFloatingCartButton()
-        
-        
-
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        
-//        floatingButton.frame = CGRect(
-//            x: view.frame.size.width - 60,
-//            y: view.frame.size.height - 150,
-//            width: 50,
-//            height: 50)
-//        
-//        let badgeSize: CGFloat = 20
-//        badgeLabel.frame = CGRect(
-//            x: floatingButton.frame.width - badgeSize - 35,
-//            y: -badgeSize / 2,
-//            width: badgeSize,
-//            height: badgeSize
-//        )
-//    }
     
     func setupSearchController() {
         searchController.searchResultsUpdater = self
@@ -107,11 +66,10 @@ class HomeVC: UIViewController {
     func setupCustomTitle() {
         let title = UILabel()
         title.text = "Menu"
-        title.font = AppFont.poppinsSemibold.of(size: 40)
-        title.textColor = AppColor.secondary.color
+        title.font = .popSemiB40
+        title.textColor = .secondary
         
         let titleBarItem = UIBarButtonItem(customView: title)
-//        navigationItem.titleView = title
         navigationItem.leftBarButtonItem = titleBarItem
     }
     
@@ -152,13 +110,13 @@ class HomeVC: UIViewController {
         let image = UIImage(systemName: "cart", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24, weight: .medium))
         floatingCartButton = UIButton(type: .system)
         floatingCartButton.setImage(image, for: .normal)
-        floatingCartButton.backgroundColor = AppColor.primary.color
-        floatingCartButton.tintColor = AppColor.eggWhite.color
+        floatingCartButton.backgroundColor = .primary
+        floatingCartButton.tintColor = .eggWhite
         floatingCartButton.layer.cornerRadius = 8
         floatingCartButton.layer.cornerRadius = 8
         floatingCartButton.layer.shadowRadius = 10
         floatingCartButton.layer.shadowOpacity = 0.3
-        floatingCartButton.layer.shadowColor = AppColor.secondary.color.cgColor
+        floatingCartButton.layer.shadowColor = UIColor.secondary.cgColor
         floatingCartButton.addTarget(self, action: #selector(cartButtonTapped), for: .touchUpInside)
         view.addSubview(floatingCartButton)
         
@@ -171,9 +129,9 @@ class HomeVC: UIViewController {
         ])
         
         badgeLabel = UILabel()
-        badgeLabel.backgroundColor = AppColor.coffeeRed.color
-        badgeLabel.textColor = AppColor.eggWhite.color
-        badgeLabel.font = AppFont.poppinsBold.of(size: 12)
+        badgeLabel.backgroundColor = .coffeeRed
+        badgeLabel.textColor = .eggWhite
+        badgeLabel.font = .popB12
         badgeLabel.textAlignment = .center
         badgeLabel.layer.cornerRadius = 10
         badgeLabel.clipsToBounds = true
@@ -211,7 +169,6 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-//        guard let text = searchController.searchBar.text else { return }
     }
 }
 

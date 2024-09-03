@@ -32,8 +32,8 @@ class CarouselCell: UITableViewCell {
         cvCarousel.decelerationRate = .fast
         selectionStyle = .none
         
-        lblCarouselTitle.font = AppFont.poppinsSemibold.of(size: 34)
-        lblCarouselTitle.textColor = AppColor.secondary.color
+        lblCarouselTitle.font = .popSemiB34
+        lblCarouselTitle.textColor = .secondary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

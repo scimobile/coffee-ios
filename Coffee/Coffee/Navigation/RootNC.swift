@@ -33,16 +33,17 @@ class RootNC: UINavigationController {
     private func checkLoginStatus() {
         if isUserLogin {
             // Go To Home
-           goToHome()
+            goToHome()
         } else {
-            goToLogin()
+//            goToLogin()
+            goToHome()
         }
     }
     
     func goToHome() {
         // TBD
-        let vc = TabVC.instantiate()
-        setViewControllers([vc], animated: true)
+        let tabVC = TabVC.init()
+        pushViewController(tabVC, animated: true)
     }
     
     func goToLogin() {

@@ -54,7 +54,6 @@
 		8D6B9BBF2C737C88001DF45A /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */; };
 		8D6B9BC52C737F9D001DF45A /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC32C737F9C001DF45A /* RootNC.swift */; };
 		8D6B9BC82C738663001DF45A /* AuthWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B9BC72C738663001DF45A /* AuthWrappers.swift */; };
-		8DE481782C73910B0033C370 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE481772C73910B0033C370 /* AppColor.swift */; };
 		8DE4817A2C7391430033C370 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE481792C7391430033C370 /* Home.storyboard */; };
 		8DE481872C7391620033C370 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4817B2C7391620033C370 /* ProfileVC.swift */; };
 		8DE481882C7391620033C370 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4817D2C7391620033C370 /* TabVC.swift */; };
@@ -142,7 +141,6 @@
 		8D6B9BBD2C737C88001DF45A /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		8D6B9BC32C737F9C001DF45A /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
 		8D6B9BC72C738663001DF45A /* AuthWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWrappers.swift; sourceTree = "<group>"; };
-		8DE481772C73910B0033C370 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		8DE481792C7391430033C370 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8DE4817B2C7391620033C370 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		8DE4817D2C7391620033C370 /* TabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
@@ -575,7 +573,6 @@
 		FEEABF302C6003270089CB35 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8DE481772C73910B0033C370 /* AppColor.swift */,
 				FEEABF3A2C6003D60089CB35 /* Fonts */,
 				FEEABF222C6002EA0089CB35 /* Assets.xcassets */,
 			);

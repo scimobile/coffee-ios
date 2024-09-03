@@ -12,8 +12,12 @@ extension UIColor {
     
     //MARK: - Colors
     static var primary: UIColor { UIColor(hex: "#A67B5B") }
+    static var secondary: UIColor { UIColor(hex: "#583732")}
     static var error: UIColor { UIColor(hex: "#F44336") }
     static var coffeeGray: UIColor { UIColor(hex: "#C6C6C6") }
+    static var eggWhite: UIColor { UIColor(hex: "#FAFAFA")}
+    static var darkBlue: UIColor { UIColor(hex: "#2E353D")}
+    static var coffeeRed: UIColor { UIColor(hex: "#F44336")}
     
     //MARK: - Added Convenience Initializer for Coverting RGB From Hex
     convenience init(hex: String, alpha: CGFloat = 1.0) {

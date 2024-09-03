@@ -28,8 +28,8 @@ class BannerCell: UITableViewCell {
         cvBanner.decelerationRate = .fast
         selectionStyle = .none
         lblBannerTitle.text = "Promotion"
-        lblBannerTitle.font = AppFont.poppinsSemibold.of(size: 34)
-        lblBannerTitle.textColor = AppColor.secondary.color
+        lblBannerTitle.font = .popSemiB34
+        lblBannerTitle.textColor = .secondary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
