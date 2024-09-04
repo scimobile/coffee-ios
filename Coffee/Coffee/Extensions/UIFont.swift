@@ -51,6 +51,8 @@ extension UIFont {
     static var popSemiB24: UIFont { FontFamily.bold.of(size: 24) }
     static var popSemiB28: UIFont { FontFamily.bold.of(size: 28) }
     static var popSemiB32: UIFont { FontFamily.bold.of(size: 32) }
+    static var popSemiB34: UIFont { FontFamily.bold.of(size: 34) }
+    static var popSemiB40: UIFont { FontFamily.bold.of(size: 40) }
         
     static var popM10: UIFont { FontFamily.medium.of(size: 10) }
     static var popM11: UIFont { FontFamily.medium.of(size: 11) }

@@ -33,14 +33,17 @@ class RootNC: UINavigationController {
     private func checkLoginStatus() {
         if isUserLogin {
             // Go To Home
-           goToHome()
+            goToHome()
         } else {
-            goToLogin()
+//            goToLogin()
+            goToHome()
         }
     }
     
     func goToHome() {
         // TBD
+        let tabVC = TabVC.init()
+        setViewControllers([tabVC], animated: true)
     }
     
     func goToLogin() {
@@ -49,7 +52,6 @@ class RootNC: UINavigationController {
     }
     
 }
-
 
 extension UIViewController {
     var rootNC:RootNC? {
