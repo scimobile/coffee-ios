@@ -16,6 +16,23 @@ extension Array where Element == UIView {
         }
     }
     
+    func addShadow(
+        radius: CGFloat = 5,
+        opacity: Float = 0.4,
+        color: UIColor = .black,
+        offset: CGSize = .init(width: 0, height: 0)
+    ) 
+    {
+        self.forEach { item in
+            item.addShadow(
+                radius: radius,
+                opacity: opacity,
+                color: color,
+                offset: offset
+            )
+        }
+    }
+    
     func backgroundColor(_ color: UIColor) {
         self.forEach { item in
             item.backgroundColor = color
@@ -42,6 +59,26 @@ extension Array where Element == UIView {
             default:
                 break
             }
+        }
+    }
+    
+    func isHidden(_ isHidden: Bool) {
+        self.forEach { item in
+            item.isHidden = isHidden
+        }
+    }
+    
+    func opacity(_ opacity: Float) {
+        self.forEach { item in
+            item.layer.opacity = opacity
+        }
+    }
+}
+
+extension Array where Element == UILabel {
+    func textColor(color: UIColor) {
+        self.forEach { label in
+            label.textColor = color
         }
     }
 }
