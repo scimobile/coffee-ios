@@ -27,6 +27,9 @@ class MenuDetailVM{
         self.delegate = delegate
     }
     
+    public func onChangeFav(){
+        detail?.boolFav.toggle()
+    }
     // TODO Get Data from API
     
     

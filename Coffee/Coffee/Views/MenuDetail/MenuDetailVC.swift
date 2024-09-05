@@ -29,56 +29,11 @@ enum IconState: String {
 
 class MenuDetailVC: UIViewController  {
 
-    @IBOutlet weak var btnFavourite: UIButton!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var imgCoffee: UIImageView!
     @IBOutlet weak var lblCoffeeName: UILabel!
     @IBOutlet weak var lblCoffeePrice: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
-    
-    //For Size
-    @IBOutlet weak var btnSmall: UIButton!
-    @IBOutlet weak var iconCup1: UIImageView!
-    @IBOutlet weak var lblSmall: UILabel!
-    
-    @IBOutlet weak var btnMedium: UIButton!
-    @IBOutlet weak var iconCup2: UIImageView!
-    @IBOutlet weak var lblMedium: UILabel!
-    
-    @IBOutlet weak var btnLarge: UIButton!
-    @IBOutlet weak var iconCup3: UIImageView!
-    @IBOutlet weak var lblLarge: UILabel!
-    
-    //For Variation
-    @IBOutlet weak var iconHot: UIImageView!
-    @IBOutlet weak var lblHot: UILabel!
-    @IBOutlet weak var iconCold: UIImageView!
-    @IBOutlet weak var lblCold: UILabel!
-    @IBOutlet weak var btnHot: UIButton!
-    @IBOutlet weak var btnCold: UIButton!
-    
-    //For Sugar
-    @IBOutlet weak var iconSugar1: UIImageView!
-    @IBOutlet weak var lblNone: UILabel!
-    @IBOutlet weak var btnNone: UIButton!
-    @IBOutlet weak var iconSugar2: UIImageView!
-    @IBOutlet weak var lbl30: UILabel!
-    @IBOutlet weak var btn30: UIButton!
-    @IBOutlet weak var iconSugar3: UIImageView!
-    @IBOutlet weak var lbl50: UILabel!
-    @IBOutlet weak var btn50: UIButton!
-    
-    @IBOutlet weak var lblSpecial: UILabel!
-  
-    //For Viwe
-    @IBOutlet weak var viewSmall: UIView!
-    @IBOutlet weak var viewMedium: UIView!
-    @IBOutlet weak var viewLarge: UIView!
-    @IBOutlet weak var viewHot: UIView!
-    @IBOutlet weak var viewCold: UIView!
-    @IBOutlet weak var viewNone: UIView!
-    @IBOutlet weak var view30: UIView!
-    @IBOutlet weak var view50: UIView!
     
     @IBOutlet weak var btnPlus: UIButton!
     @IBOutlet weak var btnMinus: UIButton!
@@ -86,6 +41,21 @@ class MenuDetailVC: UIViewController  {
     @IBOutlet weak var lblCount: UILabel!
     
     @IBOutlet weak var txtView: UITextView!
+    @IBOutlet weak var btnFav: UIButton!
+    
+    //For Size
+    @IBOutlet weak var btnSmall: UIButton!
+    @IBOutlet weak var btnMedium: UIButton!
+    @IBOutlet weak var btnLarge: UIButton!
+    
+    //For Varation
+    @IBOutlet weak var btnHot: UIButton!
+    @IBOutlet weak var btnCold: UIButton!
+    
+    //For Sugar
+    @IBOutlet weak var btnNone: UIButton!
+    @IBOutlet weak var btn30: UIButton!
+    @IBOutlet weak var btn50: UIButton!
     
     //MilkView
     @IBOutlet weak var txtMilkpick: UITextField!
@@ -141,10 +111,9 @@ class MenuDetailVC: UIViewController  {
     }
     
     private func setupViews(){
-        initialState()
         //ADD shadow to button view
-        [viewSmall,viewMedium,viewLarge,viewHot,viewCold,viewNone,view30,view50].forEach { view in
-            applyShadow(to: view)
+        [btnSmall,btnMedium,btnLarge,btnHot,btnCold,btnNone,btn30,btn50].forEach { btnSize in
+            applyShadow(to: btnSize)
         }
         
         txtView.layer.borderColor = UIColor.gray.cgColor
@@ -153,10 +122,25 @@ class MenuDetailVC: UIViewController  {
         txtView.textColor = UIColor.lightGray
         txtView.text = placeHolder
         lblCount.text = String(count)
+        
+        btnSmall.tag = 1
+        btnMedium.tag = 2
+        btnLarge.tag = 3
+        btnHot.tag = 4
+        btnCold.tag = 5
+        btnNone.tag = 6
+        btn30.tag = 7
+        btn50.tag = 8
+        
     }
     
     private func setupBindings(){
-        [btnSmall,btnMedium,btnLarge,btnHot,btnCold,btnNone,btn30,btn50].addTarget(selector: #selector(onChangeSelection(_:)))
+        
+        [btnSmall,btnMedium,btnLarge,btnHot,btnCold,btnNone,btn30,btn50].forEach { btnSize in
+            btnSize?.addTarget(self, action: #selector(onChangeCupSize(_:)), for: .touchUpInside)
+        }
+        
+        btnFav.addTarget(self, action: #selector(onChangeFav), for: .touchUpInside)
         
         txtMilkpick.addTarget(self, action: #selector(onMilkChange), for: .editingDidBegin)
         txtToppingpick.addTarget(self, action: #selector(onToppingChange), for: .editingDidBegin)
@@ -174,6 +158,71 @@ class MenuDetailVC: UIViewController  {
         txtToppingpick.delegate = self
         
         txtView.delegate = self
+        
+    }
+    
+    @objc func onChangeCupSize(_ sender:UIButton){
+        switch sender.tag {
+        case 1:
+            updateButtonStates(selectedBtn: btnSmall,
+                               unselectedBtns: [btnMedium,btnLarge],
+                               selectedImg: IconState.cupSelected.imageName(),
+                               unselectedImg: IconState.cupUnselected.imageName())
+        case 2:
+            updateButtonStates(selectedBtn: btnMedium,
+                               unselectedBtns: [btnSmall,btnLarge],
+                               selectedImg: IconState.cupSelected.imageName(),
+                               unselectedImg: IconState.cupUnselected.imageName())
+        case 3:
+            updateButtonStates(selectedBtn: btnLarge,
+                               unselectedBtns: [btnSmall,btnMedium],
+                               selectedImg: IconState.cupSelected.imageName(),
+                               unselectedImg: IconState.cupUnselected.imageName())
+        case 4:
+            updateButtonStates(selectedBtn: btnHot,
+                               unselectedBtns: [btnCold],
+                               selectedImg: IconState.hotSelected.imageName(),
+                               unselectedImg: IconState.coldUnselected.imageName())
+        case 5:
+            updateButtonStates(selectedBtn: btnCold,
+                               unselectedBtns: [btnHot],
+                               selectedImg: IconState.coldSelected.imageName(),
+                               unselectedImg: IconState.hotUnselected.imageName())
+        case 6:
+            updateButtonStates(selectedBtn: btnNone,
+                               unselectedBtns: [btn30,btn50],
+                               selectedImg: IconState.sugarSelected.imageName(),
+                               unselectedImg: IconState.sugarUnselected.imageName())
+        case 7:
+            updateButtonStates(selectedBtn: btn30,
+                               unselectedBtns: [btnNone,btn50],
+                               selectedImg: IconState.sugarSelected.imageName(),
+                               unselectedImg: IconState.sugarUnselected.imageName())
+        case 8:
+            updateButtonStates(selectedBtn: btn50,
+                               unselectedBtns: [btnNone,btn30],
+                               selectedImg: IconState.sugarSelected.imageName(),
+                               unselectedImg: IconState.sugarUnselected.imageName())
+        default:
+            print()
+        }
+    }
+    
+    @objc func onChangeFav(){
+        menuDetailVM.onChangeFav()
+    }
+    
+    private func updateButtonStates(selectedBtn:UIButton,
+                                    unselectedBtns:[UIButton],
+                                    selectedImg:String,
+                                    unselectedImg:String){
+        selectedBtn.setImage(UIImage(named: selectedImg), for: .normal)
+        selectedBtn.tintColor = .coffee
+        
+        unselectedBtns.forEach { btnUnselected in
+            btnUnselected.setImage(UIImage(named: unselectedImg), for: .normal)
+            btnUnselected.tintColor = .white
+        }
         
     }
     
@@ -219,7 +268,7 @@ class MenuDetailVC: UIViewController  {
     }
     
     
-    func applyShadow(to view: UIView) {
+    func applyShadow(to view: UIButton) {
         view.layer.shadowColor = UIColor.black.cgColor // Set shadow color
         view.layer.shadowOpacity = 0.3 // Set shadow opacity (0.0 to 1.0)
         view.layer.shadowOffset = CGSize(width: 0, height: 4) // Set shadow offset
@@ -227,139 +276,7 @@ class MenuDetailVC: UIViewController  {
         view.layer.masksToBounds = false // Disable clipping to show shadow
         view.layer.cornerRadius = 10
     }
-    
-    func initialState(){
-        //For Size
-        updateSelection(
-            selectedView: viewSmall,
-            selectedIcon: iconCup1,
-            selectedLabel: lblSmall,
-            unselectedViews: [viewMedium, viewLarge],
-            unselectedIcons: [iconCup2, iconCup3],
-            unselectedLabels: [lblMedium, lblLarge],
-            selectedImage: UIImage(named: IconState.cupSelected.imageName())!,
-            unselectedImage: UIImage(named: IconState.cupUnselected.imageName())!
-        )
-        
-       //For Variation
-        updateSelection(selectedView: viewHot,
-                           selectedIcon: iconHot,
-                           selectedLabel: lblHot,
-                           unselectedViews: [viewCold],
-                           unselectedIcons: [iconCold],
-                           unselectedLabels: [lblCold],
-                           selectedImage: UIImage(named: IconState.hotSelected.imageName())!,
-                           unselectedImage: UIImage(named: IconState.coldUnselected.imageName())!)
-        
-        //For Sugar
-        updateSelection(selectedView: viewNone,
-                        selectedIcon: iconSugar1,
-                        selectedLabel: lblNone,
-                        unselectedViews: [view30,view50],
-                        unselectedIcons: [iconSugar2,iconSugar3],
-                        unselectedLabels: [lbl30,lbl50],
-                        selectedImage: UIImage(named: IconState.sugarSelected.imageName())!,
-                        unselectedImage: UIImage(named: IconState.sugarUnselected.imageName())!)
-    }
 
-    func updateSelection(selectedView: UIView, selectedIcon: UIImageView, selectedLabel: UILabel, unselectedViews: [UIView], unselectedIcons: [UIImageView], unselectedLabels: [UILabel],selectedImage:UIImage,unselectedImage:UIImage) {
-        // Update the selected view
-        selectedView.backgroundColor = UIColor(named: "coffee-color")
-        selectedIcon.image = selectedImage
-        selectedLabel.textColor = .white
-        
-        // Update the unselected views
-        unselectedViews.forEach { $0.backgroundColor = .white }
-        unselectedIcons.forEach { $0.image = unselectedImage}
-        unselectedLabels.forEach { $0.textColor = .black }
-    }
-    
-    @objc func onChangeSelection(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            updateSelection(
-                selectedView: viewSmall,
-                selectedIcon: iconCup1,
-                selectedLabel: lblSmall,
-                unselectedViews: [viewMedium, viewLarge],
-                unselectedIcons: [iconCup2, iconCup3],
-                unselectedLabels: [lblMedium, lblLarge],
-                selectedImage: UIImage(named: IconState.cupSelected.imageName())!,
-                unselectedImage: UIImage(named: IconState.cupUnselected.imageName())!
-            )
-        case 2:
-            updateSelection(
-                selectedView: viewMedium,
-                selectedIcon: iconCup2,
-                selectedLabel: lblMedium,
-                unselectedViews: [viewSmall, viewLarge],
-                unselectedIcons: [iconCup1, iconCup3],
-                unselectedLabels: [lblSmall, lblLarge],
-                selectedImage: UIImage(named: IconState.cupSelected.imageName())!,
-                unselectedImage: UIImage(named: IconState.cupUnselected.imageName())!
-            )
-            
-        case 3:
-            updateSelection(
-                selectedView: viewLarge,
-                selectedIcon: iconCup3,
-                selectedLabel: lblLarge,
-                unselectedViews: [viewSmall, viewMedium],
-                unselectedIcons: [iconCup1, iconCup2],
-                unselectedLabels: [lblSmall, lblMedium],
-                selectedImage: UIImage(named: IconState.cupSelected.imageName())!,
-                unselectedImage: UIImage(named: IconState.cupUnselected.imageName())!
-            )
-        case 4:
-            updateSelection(selectedView: viewHot,
-                            selectedIcon: iconHot,
-                            selectedLabel: lblHot,
-                            unselectedViews: [viewCold],
-                            unselectedIcons: [iconCold],
-                            unselectedLabels: [lblCold],
-                            selectedImage: UIImage(named: IconState.hotSelected.imageName())!,
-                            unselectedImage: UIImage(named: IconState.coldUnselected.imageName())!)
-        case 5:
-            updateSelection(selectedView: viewCold,
-                            selectedIcon: iconCold,
-                            selectedLabel: lblCold,
-                            unselectedViews: [viewHot],
-                            unselectedIcons: [iconHot],
-                            unselectedLabels: [lblHot],
-                            selectedImage: UIImage(named: IconState.coldSelected.imageName())!,
-                            unselectedImage: UIImage(named: IconState.hotUnselected.imageName())!)
-        case 6:
-            updateSelection(selectedView: viewNone,
-                            selectedIcon: iconSugar1,
-                            selectedLabel: lblNone,
-                            unselectedViews: [view30,view50],
-                            unselectedIcons: [iconSugar2,iconSugar3],
-                            unselectedLabels: [lbl30,lbl50],
-                            selectedImage: UIImage(named: IconState.sugarSelected.imageName())!,
-                            unselectedImage: UIImage(named: IconState.sugarUnselected.imageName())!)
-        case 7:
-            updateSelection(selectedView: view30    ,
-                            selectedIcon: iconSugar2,
-                            selectedLabel: lbl30,
-                            unselectedViews: [viewNone,view50],
-                            unselectedIcons: [iconSugar1,iconSugar3],
-                            unselectedLabels: [lblNone,lbl50],
-                            selectedImage: UIImage(named: IconState.sugarSelected.imageName())!,
-                            unselectedImage: UIImage(named: IconState.sugarUnselected.imageName())!)
-        case 8:
-            updateSelection(selectedView: view50,
-                            selectedIcon: iconSugar3,
-                            selectedLabel: lbl50,
-                            unselectedViews: [viewNone,view30],
-                            unselectedIcons: [iconSugar1,iconSugar2],
-                            unselectedLabels: [lblNone,lbl30],
-                            selectedImage: UIImage(named: IconState.sugarSelected.imageName())!,
-                            unselectedImage: UIImage(named: IconState.sugarUnselected.imageName())!)
-        default:
-            print("hello")
-        }
-    }
-    
     @objc func incrementTapped(){
         count += 1
     }
@@ -440,6 +357,6 @@ extension MenuDetailVC:UITextViewDelegate{
 
 extension MenuDetailVC : MenuDetailDelegate{
     func onGetMenuDetail() {
-        initialState()
+        
     }
 }
