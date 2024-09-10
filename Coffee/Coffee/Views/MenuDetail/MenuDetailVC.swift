@@ -140,6 +140,8 @@ class MenuDetailVC: UIViewController  {
             btnSize?.addTarget(self, action: #selector(onChangeCupSize(_:)), for: .touchUpInside)
         }
         
+        btnSmall.addTarget(self, action: #selector(onChangeSmall(_:)), for: .touchUpInside)
+        
         btnFav.addTarget(self, action: #selector(onChangeFav), for: .touchUpInside)
         
         txtMilkpick.addTarget(self, action: #selector(onMilkChange), for: .editingDidBegin)
@@ -160,8 +162,9 @@ class MenuDetailVC: UIViewController  {
         txtView.delegate = self
         
     }
-    
+
     @objc func onChangeCupSize(_ sender:UIButton){
+        
         switch sender.tag {
         case 1:
             updateButtonStates(selectedBtn: btnSmall,
@@ -216,12 +219,16 @@ class MenuDetailVC: UIViewController  {
                                     unselectedBtns:[UIButton],
                                     selectedImg:String,
                                     unselectedImg:String){
-        selectedBtn.setImage(UIImage(named: selectedImg), for: .normal)
+        selectedBtn.setImage(UIImage(named: selectedImg), for: .selected)
+        selectedBtn.setImage(UIImage(named: unselectedImg), for: .normal)
+        selectedBtn.isSelected = true
         selectedBtn.tintColor = .coffee
         
-        unselectedBtns.forEach { btnUnselected in
-            btnUnselected.setImage(UIImage(named: unselectedImg), for: .normal)
-            btnUnselected.tintColor = .white
+        unselectedBtns.forEach { btn in
+            btn.setImage(UIImage(named: unselectedImg), for: .normal)
+            btn.setImage(UIImage(named: selectedImg), for: .selected)
+            btn.isSelected = false
+            btn.tintColor = .white
         }
         
     }
