@@ -9,10 +9,13 @@ import UIKit
 
 class ForgotPasswordVC: UIViewController, Storyboarded {
 
+    @IBOutlet weak var lblForgotPassword: UILabel!
+    @IBOutlet weak var lblEnterEmail: UILabel!
     @IBOutlet weak var tfEmailView: UIView!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var lblEmailError: UILabel!
     @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     
     static var storyboardName: String = "Auth"
     
@@ -26,13 +29,19 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
 
     private func setUpViews() {
+        lblForgotPassword.font = .popB24
+        lblEmailError.font = .popR13
+        [tfEmail, btnSubmit].addFont(.popR14)
         [tfEmailView].addBorder()
+        [btnBack, btnSubmit].tintColor(.primary)
         clearError()
     }
     
     private func setUpBindings() {
+        btnSubmit.isEnabled = false
         tfEmail.addTarget(self, action: #selector(onChangeEmail), for: .editingChanged)
         btnSubmit.addTarget(self, action: #selector(onTapSubmit), for: .touchUpInside)
+        btnBack.addTarget(self, action: #selector(onTapBack), for: .touchUpInside)
     }
     
     @objc func onChangeEmail() {
@@ -40,7 +49,13 @@ class ForgotPasswordVC: UIViewController, Storyboarded {
     }
     
     @objc func onTapSubmit() {
-        self.vm.submit()
+        let vc = ResetPasswordVC.instantiate()
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.vm.submit()
+    }
+    
+    @objc func onTapBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func clearError() {

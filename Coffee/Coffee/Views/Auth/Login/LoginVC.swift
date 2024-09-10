@@ -9,6 +9,12 @@ import UIKit
 
 class LoginVC: UIViewController, Storyboarded {
 
+    @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblPassword: UILabel!
+    @IBOutlet weak var lblOrWith: UILabel!
+    @IBOutlet weak var lblGoogleLogin: UILabel!
+    @IBOutlet weak var lblFacebookLogin: UILabel!
     @IBOutlet weak var tfEmailView: UIView!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var lblEmailError: UILabel!
@@ -41,6 +47,11 @@ class LoginVC: UIViewController, Storyboarded {
     }
 
     private func setUpViews() {
+        lblWelcome.font = .popB24
+        [tfEmail, tfPassword, btnForgotPassword, btnLogin, lblGoogleLogin, lblFacebookLogin].addFont(.popR14)
+        [lblEmailError, lblPasswordError].addFont(.popR13)
+        btnSignUp.setColoredString(fullString: btnSignUp.titleLabel?.text ?? "", .primary, "Sign Up")
+        [btnLogin, btnForgotPassword].tintColor(.primary)
         [tfEmailView, tfPasswordView, btnGoogleView].addBorder()
         clearError()
     }

@@ -16,27 +16,28 @@ class OnboardingVC: UIViewController, Storyboarded {
     @IBOutlet weak var btnNext:UIButton!
     
     private lazy var vm:OnboardingVM = .init(delegate: self)
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupView()
         setupBindings()
     }
     
     private func setupView(){
+        
+        btnNext.titleLabel?.font = .popR14
+        btnNext.tintColor = .primary
+        pageControl.currentPageIndicatorTintColor = .primary
         //Collection View Binding
-        cvOnboarding.register(.init(nibName: "OnboardingCell", bundle: nil), forCellWithReuseIdentifier: "OnboardingCell")
+        cvOnboarding.registerCell(OnboardingCell.self)
         cvOnboarding.dataSource = self
         cvOnboarding.delegate = self
         cvOnboarding.isPagingEnabled = true
         
         //Fetch Data from ViewModel
         vm.fetchData()
-        
         pageControl.numberOfPages = vm.onboardingData.count
-        
-        btnNext.titleLabel?.font = AppFont.poppinsRegular.of(size: 12)
     }
     
     private func setupBindings(){
@@ -51,8 +52,6 @@ class OnboardingVC: UIViewController, Storyboarded {
             pageControl.currentPage = nextIdex.item
         } else {
             UserDefaults.standard.set(true, forKey: UserDefaultsKeys.hasUsedAppBefore)
-            /// TODO : GO TO LOGIN
-            print("Go to Login")
             self.navigationController?.pushViewController(LoginVC.instantiate(), animated: true)
         }
         updateBtnTitle()
@@ -75,8 +74,7 @@ extension OnboardingVC: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnboardingCell", for: indexPath) as? OnboardingCell
-        guard let cell = cell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueCell(OnboardingCell.self, for: indexPath)
         cell.setup(onboardingItem: vm.onboardingData[indexPath.row])
         return cell
     }
