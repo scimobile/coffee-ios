@@ -16,6 +16,14 @@ extension Array where Element == UIView {
         }
     }
     
+
+}
+
+extension Array where Element == UIButton{
+    func addTarget(selector:Selector){
+        self.forEach { button in
+            button.addTarget(self, action: selector, for: .touchUpInside)
+
     func addShadow(
         radius: CGFloat = 5,
         opacity: Float = 0.4,
